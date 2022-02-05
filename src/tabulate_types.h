@@ -2,10 +2,6 @@
 #define TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES
 #include "tabulate.h"
 
-enum s3_class {TABLE};
-
-using table_ptr = Rcpp::XPtr<tabulate::Table>;
-using column_ptr = Rcpp::XPtr<tabulate::Column>;
 using column_format_ptr = Rcpp::XPtr<tabulate::ColumnFormat>;
 using cell_ptr = Rcpp::XPtr<tabulate::Cell>;
 using row_ptr = Rcpp::XPtr<tabulate::Row>;
@@ -36,17 +32,15 @@ public:
 template<>
 std::string ptr_t<tabulate::Table>::name ();
 
-using table_t = ptr_t<tabulate::Table>;
+template<>
+std::string ptr_t<tabulate::Column>::name ();
 
-// class table_t {
-// public:
-//   table_ptr x_;
-//   operator SEXP () const;
-//   table_t (SEXP x);
-//   table_t (tabulate::Table x);
-//   table_ptr operator->();
-//   tabulate::Table operator* ();
-// };
+template<>
+std::string ptr_t<tabulate::ColumnFormat>::name ();
+
+using table_t = ptr_t<tabulate::Table>;
+using column_t = ptr_t<tabulate::Column>;
+using column_format_t = ptr_t<tabulate::ColumnFormat>;
 
 class row_t {
 public:

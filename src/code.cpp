@@ -11,22 +11,22 @@ void table_add_row (table_t table, row_t row) {
 }
 
 // [[Rcpp::export]]
-column_ptr table_column (table_t table, size_t index) {
-  return column_ptr(new tabulate::Column(table->column(index)));
+column_t table_column (table_t table, size_t index) {
+  return tabulate::Column(table->column(index));
 }
 
 // [[Rcpp::export]]
-column_format_ptr column_format (column_ptr column) {
-  return column_format_ptr(new tabulate::ColumnFormat(column->format()));
+column_format_t column_format (column_t column) {
+  return tabulate::ColumnFormat(column->format());
 }
 
 // [[Rcpp::export]]
-void column_format_font_align (column_format_ptr column, font_align_t font_align) {
+void column_format_font_align (column_format_t column, font_align_t font_align) {
   column->font_align(font_align.font_align_);
 }
 
 // [[Rcpp::export]]
-void column_format_font_color (column_format_ptr column, color_t color) {
+void column_format_font_color (column_format_t column, color_t color) {
   column->font_color(color.color_);
 }
 

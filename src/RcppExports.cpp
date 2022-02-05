@@ -33,7 +33,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // table_column
-column_ptr table_column(table_t table, size_t index);
+column_t table_column(table_t table, size_t index);
 RcppExport SEXP _tabulate_table_column(SEXP tableSEXP, SEXP indexSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -45,33 +45,33 @@ BEGIN_RCPP
 END_RCPP
 }
 // column_format
-column_format_ptr column_format(column_ptr column);
+column_format_t column_format(column_t column);
 RcppExport SEXP _tabulate_column_format(SEXP columnSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< column_ptr >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< column_t >::type column(columnSEXP);
     rcpp_result_gen = Rcpp::wrap(column_format(column));
     return rcpp_result_gen;
 END_RCPP
 }
 // column_format_font_align
-void column_format_font_align(column_format_ptr column, font_align_t font_align);
+void column_format_font_align(column_format_t column, font_align_t font_align);
 RcppExport SEXP _tabulate_column_format_font_align(SEXP columnSEXP, SEXP font_alignSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< column_format_ptr >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< font_align_t >::type font_align(font_alignSEXP);
     column_format_font_align(column, font_align);
     return R_NilValue;
 END_RCPP
 }
 // column_format_font_color
-void column_format_font_color(column_format_ptr column, color_t color);
+void column_format_font_color(column_format_t column, color_t color);
 RcppExport SEXP _tabulate_column_format_font_color(SEXP columnSEXP, SEXP colorSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< column_format_ptr >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type color(colorSEXP);
     column_format_font_color(column, color);
     return R_NilValue;

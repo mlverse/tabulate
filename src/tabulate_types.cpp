@@ -5,28 +5,15 @@ std::string ptr_t<tabulate::Table>::name () {
   return "tabulate_table";
 }
 
-// table_t::operator SEXP () const {
-//   return x_;
-// }
-//
-// table_t::table_t (SEXP x) : x_{Rcpp::as<table_ptr>(x)} {
-//   auto cl = Rcpp::as<std::string>(x_.attr("class"));
-//   if (cl != "tabulate_table") {
-//     Rcpp::stop("Wrong pointer type. Expected tabulate_table got " + cl);
-//   }
-// }
-//
-// table_t::table_t (tabulate::Table x) : x_{table_ptr(new tabulate::Table(x))} {
-//   x_.attr("class") = "tabulate_table";
-// }
-//
-// table_ptr table_t::operator->() {
-//   return x_;
-// }
-//
-// tabulate::Table table_t::operator*() {
-//   return *x_;
-// }
+template<>
+std::string ptr_t<tabulate::Column>::name () {
+  return "tabulate_column";
+}
+
+template<>
+std::string ptr_t<tabulate::ColumnFormat>::name () {
+  return "tabulate_column_format";
+}
 
 row_t::operator SEXP () const {
   return Rcpp::wrap("lalala");
