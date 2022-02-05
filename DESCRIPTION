@@ -1,0 +1,23 @@
+Package: tabulate
+Title: Pretty Console Output for Tables
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = "Daniel", 
+           family = "Falbel", 
+           email = "daniel@rstudio.com", 
+           role = c("aut", "cre")),
+    person(given = "Pranav", 
+           role = c("aut", "cph"), 
+           comment = "Author of included Tabulate code"))
+Description: Generates pretty console output for tables allowing for full customization
+  of cell colors, font type, borders and many others.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+LinkingTo: 
+    Rcpp
+Imports: 
+    magrittr,
+    Rcpp
+SystemRequirements: C++11
