@@ -18,6 +18,7 @@ RoxygenNote: 7.1.2
 LinkingTo: 
     Rcpp
 Imports: 
+    crayon,
     magrittr,
     Rcpp
 SystemRequirements: C++11

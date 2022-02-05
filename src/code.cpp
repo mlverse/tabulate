@@ -31,7 +31,7 @@ void column_format_font_color (column_format_t column, color_t color) {
 }
 
 // [[Rcpp::export]]
-std::string tabulate_format (table_t table, bool colors = true) {
+std::string tabulate_format (table_t table, bool colors) {
   std::stringstream stream;
   stream.iword(termcolor::_internal::colorize_index) = colors;
   stream << *table << std::endl;

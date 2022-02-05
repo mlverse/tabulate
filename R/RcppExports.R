@@ -25,7 +25,7 @@ column_format_font_color <- function(column, color) {
     invisible(.Call(`_tabulate_column_format_font_color`, column, color))
 }
 
-tabulate_format <- function(table, colors = TRUE) {
+tabulate_format <- function(table, colors) {
     .Call(`_tabulate_tabulate_format`, table, colors)
 }
 
