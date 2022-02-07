@@ -2,7 +2,7 @@
 
 // [[Rcpp::export]]
 cell_t row_cell (row_t row, index_t index) {
-  return tabulate::Cell(row->cell(index));
+  return row->cell(index);
 }
 
 // [[Rcpp::export]]

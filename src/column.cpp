@@ -2,7 +2,7 @@
 
 // [[Rcpp::export]]
 column_format_t column_format (column_t column) {
-  return tabulate::ColumnFormat(column->format());
+  return column_format_t(column->format());
 }
 
 // [[Rcpp::export(invisible = true)]]

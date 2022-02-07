@@ -6,7 +6,7 @@ print.tabulate_table <- function(x, ...) {
 
 #' @export
 format.tabulate_table <- function(x, ..., colors = TRUE) {
-  if (!crayon::num_ansi_colors() >= 8) {
+  if (!cli::num_ansi_colors() >= 8) {
     colors <- FALSE
   }
 

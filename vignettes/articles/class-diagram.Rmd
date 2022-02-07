@@ -2,19 +2,20 @@
 title: "Class diagram"
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
-```{r setup}
-library(tabulate)
+```{r setup, include = FALSE}
 devtools::load_all()
+knitr::opts_chunk$set(
+	collapse = TRUE,
+	comment = "#>",
+	out.width = "100%"
+)
+# Turn on ANSI colors
+options(cli.num_colors = 256L)
+old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
 ```
 
 ```{r}
+library(tabulate)
 # Global styling
 class_diagram <- tabulate_table()
 class_diagram %>% 

@@ -16,7 +16,10 @@ public:
       Rcpp::stop("Expected a pointer with class '" + name() + "' but got '" + cl + "'");
     }
   };
-  ptr_t (T x) : x_{new T(x)} {
+  ptr_t (T& x) : x_{&x, false} {
+    x_.attr("class") = name();
+  };
+  explicit ptr_t (T x) : x_{new T(x)} {
     x_.attr("class") = name();
   };
   Rcpp::XPtr<T> operator->() {

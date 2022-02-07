@@ -2,7 +2,7 @@
 
 // [[Rcpp::export]]
 table_t tabulate_table () {
-  return tabulate::Table();
+  return table_t(tabulate::Table());
 }
 
 // [[Rcpp::export(invisible=true)]]
@@ -13,12 +13,12 @@ table_t table_add_row (table_t table, table_row_t row) {
 
 // [[Rcpp::export]]
 column_t table_column (table_t table, index_t index) {
-  return tabulate::Column(table->column(index));
+  return column_t(table->column(index));
 }
 
 // [[Rcpp::export]]
 row_t table_row (table_t table, index_t index) {
-  return tabulate::Row(table->row(index));
+  return table->row(index);
 }
 
 // [[Rcpp::export]]

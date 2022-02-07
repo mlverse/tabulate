@@ -39,3 +39,18 @@ test_that("can nest tables", {
 
   expect_snapshot(print(animal))
 })
+
+test_that("can set table configs", {
+
+  table <- tabulate_table()
+  table %>%
+    table_add_row("hello") %>%
+    table_add_row("world")
+
+  table %>%
+    table_format() %>%
+    format_hide_border_bottom() %>%
+    format_width(50)
+
+  expect_snapshot(print(table))
+})
