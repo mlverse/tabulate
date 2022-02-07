@@ -2707,13 +2707,13 @@ using std::swap;
 // Compiler warning suppression:
 
 #if defined(__clang__)
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundef"
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wundef"
 #elif defined(__GNUC__)
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wundef"
+//#pragma GCC diagnostic push
+//#pragma GCC diagnostic ignored "-Wundef"
 #elif defined(_MSC_VER)
-#pragma warning(push)
+//#pragma warning(push)
 #endif
 
 // half-open range [lo..hi):
@@ -3974,11 +3974,11 @@ public:
 #endif // optional_CPP11_OR_GREATER
 
 #if defined(__clang__)
-#pragma clang diagnostic pop
+//#pragma clang diagnostic pop
 #elif defined(__GNUC__)
-#pragma GCC diagnostic pop
+//#pragma GCC diagnostic pop
 #elif defined(_MSC_VER)
-#pragma warning(pop)
+//#pragma warning(pop)
 #endif
 
 #endif // optional_USES_STD_OPTIONAL
@@ -5972,10 +5972,10 @@ nssv_RESTORE_WARNINGS()
   //! from the a given `std::ostream` object, I have to write
   //! this kind of hack.
   inline FILE *get_standard_stream(const std::ostream &stream) {
-    if (&stream == &std::cout)
-      return stdout;
-    else if ((&stream == &std::cerr) || (&stream == &std::clog))
-      return stderr;
+    // if (&stream == &std::cout)
+    //   return stdout;
+    // else if ((&stream == &std::cerr) || (&stream == &std::clog))
+    //   return stderr;
 
     return 0;
   }
