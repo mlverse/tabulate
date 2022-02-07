@@ -39,11 +39,62 @@ font_align_t::font_align_t (SEXP x) {
   }
 }
 
+font_align_t::operator tabulate::FontAlign() {
+  return font_align_;
+}
+
 color_t::color_t (SEXP x) {
   auto str = Rcpp::as<std::string>(x);
   if (str == "yellow") {
     color_ = tabulate::Color::yellow;
+  } else if (str == "grey") {
+    color_ = tabulate::Color::grey;
+  } else if (str == "red") {
+    color_ = tabulate::Color::red;
+  } else if (str == "green") {
+    color_ = tabulate::Color::green;
+  } else if (str == "blue") {
+    color_ = tabulate::Color::blue;
+  } else if (str == "magenta") {
+    color_ = tabulate::Color::magenta;
+  } else if (str == "cyan") {
+    color_ = tabulate::Color::cyan;
+  } else if (str == "white") {
+    color_ = tabulate::Color::white;
+  } else if (str == "none") {
+    color_ = tabulate::Color::none;
   } else {
     Rcpp::stop("Unsupported color type: " + str);
   }
+}
+
+color_t::operator tabulate::Color() {
+  return color_;
+}
+
+font_style_t::font_style_t (SEXP x) {
+  auto str = Rcpp::as<std::string>(x);
+  if (str == "bold") {
+    font_style_ = tabulate::FontStyle::bold;
+  } else if (str == "dark") {
+    font_style_ = tabulate::FontStyle::dark;
+  } else if (str == "italic") {
+    font_style_ = tabulate::FontStyle::italic;
+  } else if (str == "underline") {
+    font_style_ = tabulate::FontStyle::underline;
+  } else if (str == "blink") {
+    font_style_ = tabulate::FontStyle::blink;
+  } else if (str == "reverse") {
+    font_style_ = tabulate::FontStyle::reverse;
+  } else if (str == "concealed") {
+    font_style_ = tabulate::FontStyle::concealed;
+  } else if (str == "rossed") {
+    font_style_ = tabulate::FontStyle::crossed;
+  } else {
+    Rcpp::stop("Unsupported font style type: " + str);
+  }
+}
+
+font_style_t::operator tabulate::FontStyle () {
+  return font_style_;
 }

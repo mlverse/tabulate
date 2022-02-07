@@ -15,20 +15,6 @@ column_t table_column (table_t table, size_t index) {
   return tabulate::Column(table->column(index));
 }
 
-// [[Rcpp::export]]
-column_format_t column_format (column_t column) {
-  return tabulate::ColumnFormat(column->format());
-}
-
-// [[Rcpp::export]]
-void column_format_font_align (column_format_t column, font_align_t font_align) {
-  column->font_align(font_align.font_align_);
-}
-
-// [[Rcpp::export]]
-void column_format_font_color (column_format_t column, color_t color) {
-  column->font_color(color.color_);
-}
 
 // [[Rcpp::export]]
 std::string tabulate_format (table_t table, bool colors) {

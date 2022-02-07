@@ -44,39 +44,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// column_format
-column_format_t column_format(column_t column);
-RcppExport SEXP _tabulate_column_format(SEXP columnSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< column_t >::type column(columnSEXP);
-    rcpp_result_gen = Rcpp::wrap(column_format(column));
-    return rcpp_result_gen;
-END_RCPP
-}
-// column_format_font_align
-void column_format_font_align(column_format_t column, font_align_t font_align);
-RcppExport SEXP _tabulate_column_format_font_align(SEXP columnSEXP, SEXP font_alignSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
-    Rcpp::traits::input_parameter< font_align_t >::type font_align(font_alignSEXP);
-    column_format_font_align(column, font_align);
-    return R_NilValue;
-END_RCPP
-}
-// column_format_font_color
-void column_format_font_color(column_format_t column, color_t color);
-RcppExport SEXP _tabulate_column_format_font_color(SEXP columnSEXP, SEXP colorSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
-    Rcpp::traits::input_parameter< color_t >::type color(colorSEXP);
-    column_format_font_color(column, color);
-    return R_NilValue;
-END_RCPP
-}
 // tabulate_format
 std::string tabulate_format(table_t table, bool colors);
 RcppExport SEXP _tabulate_tabulate_format(SEXP tableSEXP, SEXP colorsSEXP) {
@@ -89,15 +56,108 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// column_format
+column_format_t column_format(column_t column);
+RcppExport SEXP _tabulate_column_format(SEXP columnSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_t >::type column(columnSEXP);
+    rcpp_result_gen = Rcpp::wrap(column_format(column));
+    return rcpp_result_gen;
+END_RCPP
+}
+// column_format_width
+void column_format_width(column_format_t column, size_t value);
+RcppExport SEXP _tabulate_column_format_width(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
+    column_format_width(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_height
+void column_format_height(column_format_t column, size_t value);
+RcppExport SEXP _tabulate_column_format_height(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
+    column_format_height(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_padding
+void column_format_padding(column_format_t column, size_t value);
+RcppExport SEXP _tabulate_column_format_padding(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
+    column_format_padding(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_padding_left
+void column_format_padding_left(column_format_t column, size_t value);
+RcppExport SEXP _tabulate_column_format_padding_left(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
+    column_format_padding_left(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_padding_right
+void column_format_padding_right(column_format_t column, size_t value);
+RcppExport SEXP _tabulate_column_format_padding_right(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
+    column_format_padding_right(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_padding_top
+void column_format_padding_top(column_format_t column, size_t value);
+RcppExport SEXP _tabulate_column_format_padding_top(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
+    column_format_padding_top(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_padding_bottom
+void column_format_padding_bottom(column_format_t column, size_t value);
+RcppExport SEXP _tabulate_column_format_padding_bottom(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
+    column_format_padding_bottom(column, value);
+    return R_NilValue;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_tabulate_tabulate_table", (DL_FUNC) &_tabulate_tabulate_table, 0},
     {"_tabulate_table_add_row", (DL_FUNC) &_tabulate_table_add_row, 2},
     {"_tabulate_table_column", (DL_FUNC) &_tabulate_table_column, 2},
-    {"_tabulate_column_format", (DL_FUNC) &_tabulate_column_format, 1},
-    {"_tabulate_column_format_font_align", (DL_FUNC) &_tabulate_column_format_font_align, 2},
-    {"_tabulate_column_format_font_color", (DL_FUNC) &_tabulate_column_format_font_color, 2},
     {"_tabulate_tabulate_format", (DL_FUNC) &_tabulate_tabulate_format, 2},
+    {"_tabulate_column_format", (DL_FUNC) &_tabulate_column_format, 1},
+    {"_tabulate_column_format_width", (DL_FUNC) &_tabulate_column_format_width, 2},
+    {"_tabulate_column_format_height", (DL_FUNC) &_tabulate_column_format_height, 2},
+    {"_tabulate_column_format_padding", (DL_FUNC) &_tabulate_column_format_padding, 2},
+    {"_tabulate_column_format_padding_left", (DL_FUNC) &_tabulate_column_format_padding_left, 2},
+    {"_tabulate_column_format_padding_right", (DL_FUNC) &_tabulate_column_format_padding_right, 2},
+    {"_tabulate_column_format_padding_top", (DL_FUNC) &_tabulate_column_format_padding_top, 2},
+    {"_tabulate_column_format_padding_bottom", (DL_FUNC) &_tabulate_column_format_padding_bottom, 2},
     {NULL, NULL, 0}
 };
 

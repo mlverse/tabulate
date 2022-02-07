@@ -1,7 +1,6 @@
 #include "tabulate.h"
 #include <Rcpp.h>
 
-using column_format_ptr = Rcpp::XPtr<tabulate::ColumnFormat>;
 using cell_ptr = Rcpp::XPtr<tabulate::Cell>;
 using row_ptr = Rcpp::XPtr<tabulate::Row>;
 
@@ -52,12 +51,36 @@ class font_align_t {
 public:
   tabulate::FontAlign font_align_;
   font_align_t (SEXP x);
+  operator tabulate::FontAlign ();
 };
 
 class color_t {
 public:
   tabulate::Color color_;
   color_t (SEXP x);
+  operator tabulate::Color ();
 };
 
+class font_style_t {
+public:
+  tabulate::FontStyle font_style_;
+  font_style_t (SEXP x);
+  operator tabulate::FontStyle ();
+};
 
+template<typename T, typename W>
+class vector_t {
+public:
+  std::vector<T> buf_;
+  vector_t (SEXP x) {
+    auto vec = Rcpp::as<std::vector<std::string>>(x);
+    for (auto& elem: vec) {
+      buf_.push_back(elem);
+    }
+  }
+  operator std::vector<T> () {
+    return buf_;
+  }
+};
+
+using font_style_v = vector_t<tabulate::FontStyle, font_style_t>;

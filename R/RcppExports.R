@@ -13,19 +13,39 @@ table_column <- function(table, index) {
     .Call(`_tabulate_table_column`, table, index)
 }
 
+tabulate_format <- function(table, colors) {
+    .Call(`_tabulate_tabulate_format`, table, colors)
+}
+
 column_format <- function(column) {
     .Call(`_tabulate_column_format`, column)
 }
 
-column_format_font_align <- function(column, font_align) {
-    invisible(.Call(`_tabulate_column_format_font_align`, column, font_align))
+column_format_width <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_width`, column, value))
 }
 
-column_format_font_color <- function(column, color) {
-    invisible(.Call(`_tabulate_column_format_font_color`, column, color))
+column_format_height <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_height`, column, value))
 }
 
-tabulate_format <- function(table, colors) {
-    .Call(`_tabulate_tabulate_format`, table, colors)
+column_format_padding <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_padding`, column, value))
+}
+
+column_format_padding_left <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_padding_left`, column, value))
+}
+
+column_format_padding_right <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_padding_right`, column, value))
+}
+
+column_format_padding_top <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_padding_top`, column, value))
+}
+
+column_format_padding_bottom <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_padding_bottom`, column, value))
 }
 
