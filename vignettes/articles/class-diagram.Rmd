@@ -3,7 +3,7 @@ title: "Class diagram"
 ---
 
 ```{r setup, include = FALSE}
-devtools::load_all()
+pkgload::load_all()
 knitr::opts_chunk$set(
 	collapse = TRUE,
 	comment = "#>",
