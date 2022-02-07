@@ -55,37 +55,49 @@ BEGIN_RCPP
 END_RCPP
 }
 // table_add_row
-void table_add_row(table_t table, table_row_t row);
+table_t table_add_row(table_t table, table_row_t row);
 RcppExport SEXP _tabulate_table_add_row(SEXP tableSEXP, SEXP rowSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
     Rcpp::traits::input_parameter< table_row_t >::type row(rowSEXP);
-    table_add_row(table, row);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(table_add_row(table, row));
+    return rcpp_result_gen;
 END_RCPP
 }
 // table_column
-column_t table_column(table_t table, size_t index);
+column_t table_column(table_t table, index_t index);
 RcppExport SEXP _tabulate_table_column(SEXP tableSEXP, SEXP indexSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
-    Rcpp::traits::input_parameter< size_t >::type index(indexSEXP);
+    Rcpp::traits::input_parameter< index_t >::type index(indexSEXP);
     rcpp_result_gen = Rcpp::wrap(table_column(table, index));
     return rcpp_result_gen;
 END_RCPP
 }
 // table_row
-row_t table_row(table_t table, size_t index);
+row_t table_row(table_t table, index_t index);
 RcppExport SEXP _tabulate_table_row(SEXP tableSEXP, SEXP indexSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
-    Rcpp::traits::input_parameter< size_t >::type index(indexSEXP);
+    Rcpp::traits::input_parameter< index_t >::type index(indexSEXP);
     rcpp_result_gen = Rcpp::wrap(table_row(table, index));
+    return rcpp_result_gen;
+END_RCPP
+}
+// table_format
+format_t table_format(table_t table);
+RcppExport SEXP _tabulate_table_format(SEXP tableSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
+    rcpp_result_gen = Rcpp::wrap(table_format(table));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -113,1038 +125,1143 @@ BEGIN_RCPP
 END_RCPP
 }
 // column_format_width
-void column_format_width(column_format_t column, size_t value);
+column_format_t column_format_width(column_format_t column, size_t value);
 RcppExport SEXP _tabulate_column_format_width(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    column_format_width(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_width(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_height
-void column_format_height(column_format_t column, size_t value);
+column_format_t column_format_height(column_format_t column, size_t value);
 RcppExport SEXP _tabulate_column_format_height(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    column_format_height(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_height(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_padding
-void column_format_padding(column_format_t column, size_t value);
+column_format_t column_format_padding(column_format_t column, size_t value);
 RcppExport SEXP _tabulate_column_format_padding(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    column_format_padding(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_padding(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_padding_left
-void column_format_padding_left(column_format_t column, size_t value);
+column_format_t column_format_padding_left(column_format_t column, size_t value);
 RcppExport SEXP _tabulate_column_format_padding_left(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    column_format_padding_left(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_padding_left(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_padding_right
-void column_format_padding_right(column_format_t column, size_t value);
+column_format_t column_format_padding_right(column_format_t column, size_t value);
 RcppExport SEXP _tabulate_column_format_padding_right(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    column_format_padding_right(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_padding_right(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_padding_top
-void column_format_padding_top(column_format_t column, size_t value);
+column_format_t column_format_padding_top(column_format_t column, size_t value);
 RcppExport SEXP _tabulate_column_format_padding_top(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    column_format_padding_top(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_padding_top(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_padding_bottom
-void column_format_padding_bottom(column_format_t column, size_t value);
+column_format_t column_format_padding_bottom(column_format_t column, size_t value);
 RcppExport SEXP _tabulate_column_format_padding_bottom(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    column_format_padding_bottom(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_padding_bottom(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border
-void column_format_border(column_format_t column, const std::string& value);
+column_format_t column_format_border(column_format_t column, const std::string& value);
 RcppExport SEXP _tabulate_column_format_border(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string& >::type value(valueSEXP);
-    column_format_border(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_color
-void column_format_border_color(column_format_t column, color_t value);
+column_format_t column_format_border_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_background_color
-void column_format_border_background_color(column_format_t column, color_t value);
+column_format_t column_format_border_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_left
-void column_format_border_left(column_format_t column, const std::string value);
+column_format_t column_format_border_left(column_format_t column, const std::string value);
 RcppExport SEXP _tabulate_column_format_border_left(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    column_format_border_left(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_left(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_left_color
-void column_format_border_left_color(column_format_t column, color_t value);
+column_format_t column_format_border_left_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_left_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_left_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_left_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_left_background_color
-void column_format_border_left_background_color(column_format_t column, color_t value);
+column_format_t column_format_border_left_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_left_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_left_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_left_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_right
-void column_format_border_right(column_format_t column, const std::string value);
+column_format_t column_format_border_right(column_format_t column, const std::string value);
 RcppExport SEXP _tabulate_column_format_border_right(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    column_format_border_right(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_right(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_right_color
-void column_format_border_right_color(column_format_t column, color_t value);
+column_format_t column_format_border_right_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_right_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_right_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_right_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_right_background_color
-void column_format_border_right_background_color(column_format_t column, color_t value);
+column_format_t column_format_border_right_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_right_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_right_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_right_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_top
-void column_format_border_top(column_format_t column, const std::string value);
+column_format_t column_format_border_top(column_format_t column, const std::string value);
 RcppExport SEXP _tabulate_column_format_border_top(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    column_format_border_top(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_top(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_top_color
-void column_format_border_top_color(column_format_t column, color_t value);
+column_format_t column_format_border_top_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_top_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_top_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_top_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_top_background_color
-void column_format_border_top_background_color(column_format_t column, color_t value);
+column_format_t column_format_border_top_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_top_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_top_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_top_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_bottom
-void column_format_border_bottom(column_format_t column, const std::string value);
+column_format_t column_format_border_bottom(column_format_t column, const std::string value);
 RcppExport SEXP _tabulate_column_format_border_bottom(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    column_format_border_bottom(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_bottom(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_bottom_color
-void column_format_border_bottom_color(column_format_t column, color_t value);
+column_format_t column_format_border_bottom_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_bottom_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_bottom_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_bottom_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_border_bottom_background_color
-void column_format_border_bottom_background_color(column_format_t column, color_t value);
+column_format_t column_format_border_bottom_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_border_bottom_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_border_bottom_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_border_bottom_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_corner
-void column_format_corner(column_format_t column, const std::string value);
+column_format_t column_format_corner(column_format_t column, const std::string value);
 RcppExport SEXP _tabulate_column_format_corner(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    column_format_corner(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_corner(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_corner_color
-void column_format_corner_color(column_format_t column, color_t value);
+column_format_t column_format_corner_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_corner_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_corner_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_corner_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_corner_background_color
-void column_format_corner_background_color(column_format_t column, color_t value);
+column_format_t column_format_corner_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_corner_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_corner_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_corner_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_column_separator
-void column_format_column_separator(column_format_t column, const std::string value);
+column_format_t column_format_column_separator(column_format_t column, const std::string value);
 RcppExport SEXP _tabulate_column_format_column_separator(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    column_format_column_separator(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_column_separator(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_column_separator_color
-void column_format_column_separator_color(column_format_t column, color_t value);
+column_format_t column_format_column_separator_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_column_separator_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_column_separator_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_column_separator_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_column_separator_background_color
-void column_format_column_separator_background_color(column_format_t column, color_t value);
+column_format_t column_format_column_separator_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_column_separator_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_column_separator_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_column_separator_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_font_align
-void column_format_font_align(column_format_t column, font_align_t value);
+column_format_t column_format_font_align(column_format_t column, font_align_t value);
 RcppExport SEXP _tabulate_column_format_font_align(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< font_align_t >::type value(valueSEXP);
-    column_format_font_align(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_font_align(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_font_style
-void column_format_font_style(column_format_t column, font_style_v value);
+column_format_t column_format_font_style(column_format_t column, font_style_v value);
 RcppExport SEXP _tabulate_column_format_font_style(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< font_style_v >::type value(valueSEXP);
-    column_format_font_style(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_font_style(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_font_color
-void column_format_font_color(column_format_t column, color_t value);
+column_format_t column_format_font_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_font_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_font_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_font_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_font_background_color
-void column_format_font_background_color(column_format_t column, color_t value);
+column_format_t column_format_font_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_font_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_font_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_font_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_color
-void column_format_color(column_format_t column, color_t value);
+column_format_t column_format_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_background_color
-void column_format_background_color(column_format_t column, color_t value);
+column_format_t column_format_background_color(column_format_t column, color_t value);
 RcppExport SEXP _tabulate_column_format_background_color(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    column_format_background_color(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_background_color(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_multi_byte_characters
-void column_format_multi_byte_characters(column_format_t column, bool value);
+column_format_t column_format_multi_byte_characters(column_format_t column, bool value);
 RcppExport SEXP _tabulate_column_format_multi_byte_characters(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< bool >::type value(valueSEXP);
-    column_format_multi_byte_characters(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_multi_byte_characters(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // column_format_locale
-void column_format_locale(column_format_t column, const std::string value);
+column_format_t column_format_locale(column_format_t column, const std::string value);
 RcppExport SEXP _tabulate_column_format_locale(SEXP columnSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    column_format_locale(column, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(column_format_locale(column, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_width
-void format_width(format_t format, size_t value);
+format_t format_width(format_t format, size_t value);
 RcppExport SEXP _tabulate_format_width(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    format_width(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_width(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_height
-void format_height(format_t format, size_t value);
+format_t format_height(format_t format, size_t value);
 RcppExport SEXP _tabulate_format_height(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    format_height(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_height(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_padding
-void format_padding(format_t format, size_t value);
+format_t format_padding(format_t format, size_t value);
 RcppExport SEXP _tabulate_format_padding(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    format_padding(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_padding(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_padding_left
-void format_padding_left(format_t format, size_t value);
+format_t format_padding_left(format_t format, size_t value);
 RcppExport SEXP _tabulate_format_padding_left(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    format_padding_left(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_padding_left(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_padding_right
-void format_padding_right(format_t format, size_t value);
+format_t format_padding_right(format_t format, size_t value);
 RcppExport SEXP _tabulate_format_padding_right(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    format_padding_right(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_padding_right(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_padding_top
-void format_padding_top(format_t format, size_t value);
+format_t format_padding_top(format_t format, size_t value);
 RcppExport SEXP _tabulate_format_padding_top(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    format_padding_top(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_padding_top(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_padding_bottom
-void format_padding_bottom(format_t format, size_t value);
+format_t format_padding_bottom(format_t format, size_t value);
 RcppExport SEXP _tabulate_format_padding_bottom(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< size_t >::type value(valueSEXP);
-    format_padding_bottom(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_padding_bottom(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border
-void format_border(format_t format, const std::string value);
+format_t format_border(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_border(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_border(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_color
-void format_border_color(format_t format, color_t value);
+format_t format_border_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_background_color
-void format_border_background_color(format_t format, color_t value);
+format_t format_border_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_left
-void format_border_left(format_t format, const std::string value);
+format_t format_border_left(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_border_left(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_border_left(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_left(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_left_color
-void format_border_left_color(format_t format, color_t value);
+format_t format_border_left_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_left_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_left_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_left_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_left_background_color
-void format_border_left_background_color(format_t format, color_t value);
+format_t format_border_left_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_left_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_left_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_left_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_right
-void format_border_right(format_t format, const std::string value);
+format_t format_border_right(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_border_right(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_border_right(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_right(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_right_color
-void format_border_right_color(format_t format, color_t value);
+format_t format_border_right_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_right_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_right_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_right_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_right_background_color
-void format_border_right_background_color(format_t format, color_t value);
+format_t format_border_right_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_right_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_right_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_right_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_top
-void format_border_top(format_t format, const std::string value);
+format_t format_border_top(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_border_top(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_border_top(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_top(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_top_color
-void format_border_top_color(format_t format, color_t value);
+format_t format_border_top_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_top_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_top_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_top_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_top_background_color
-void format_border_top_background_color(format_t format, color_t value);
+format_t format_border_top_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_top_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_top_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_top_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_bottom
-void format_border_bottom(format_t format, const std::string value);
+format_t format_border_bottom(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_border_bottom(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_border_bottom(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_bottom(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_bottom_color
-void format_border_bottom_color(format_t format, color_t value);
+format_t format_border_bottom_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_bottom_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_bottom_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_bottom_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_border_bottom_background_color
-void format_border_bottom_background_color(format_t format, color_t value);
+format_t format_border_bottom_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_border_bottom_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_border_bottom_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_border_bottom_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_show_border
-void format_show_border(format_t format);
+format_t format_show_border(format_t format);
 RcppExport SEXP _tabulate_format_show_border(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_show_border(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_show_border(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_hide_border
-void format_hide_border(format_t format);
+format_t format_hide_border(format_t format);
 RcppExport SEXP _tabulate_format_hide_border(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_hide_border(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_hide_border(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_show_border_top
-void format_show_border_top(format_t format);
+format_t format_show_border_top(format_t format);
 RcppExport SEXP _tabulate_format_show_border_top(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_show_border_top(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_show_border_top(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_hide_border_top
-void format_hide_border_top(format_t format);
+format_t format_hide_border_top(format_t format);
 RcppExport SEXP _tabulate_format_hide_border_top(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_hide_border_top(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_hide_border_top(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_show_border_bottom
-void format_show_border_bottom(format_t format);
+format_t format_show_border_bottom(format_t format);
 RcppExport SEXP _tabulate_format_show_border_bottom(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_show_border_bottom(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_show_border_bottom(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_hide_border_bottom
-void format_hide_border_bottom(format_t format);
+format_t format_hide_border_bottom(format_t format);
 RcppExport SEXP _tabulate_format_hide_border_bottom(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_hide_border_bottom(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_hide_border_bottom(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_show_border_left
-void format_show_border_left(format_t format);
+format_t format_show_border_left(format_t format);
 RcppExport SEXP _tabulate_format_show_border_left(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_show_border_left(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_show_border_left(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_hide_border_left
-void format_hide_border_left(format_t format);
+format_t format_hide_border_left(format_t format);
 RcppExport SEXP _tabulate_format_hide_border_left(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_hide_border_left(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_hide_border_left(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_show_border_right
-void format_show_border_right(format_t format);
+format_t format_show_border_right(format_t format);
 RcppExport SEXP _tabulate_format_show_border_right(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_show_border_right(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_show_border_right(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_hide_border_right
-void format_hide_border_right(format_t format);
+format_t format_hide_border_right(format_t format);
 RcppExport SEXP _tabulate_format_hide_border_right(SEXP formatSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
-    format_hide_border_right(format);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_hide_border_right(format));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner
-void format_corner(format_t format, const std::string value);
+format_t format_corner(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_corner(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_corner(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_color
-void format_corner_color(format_t format, color_t value);
+format_t format_corner_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_background_color
-void format_corner_background_color(format_t format, color_t value);
+format_t format_corner_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_top_left
-void format_corner_top_left(format_t format, const std::string value);
+format_t format_corner_top_left(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_corner_top_left(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_corner_top_left(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_top_left(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_top_left_color
-void format_corner_top_left_color(format_t format, color_t value);
+format_t format_corner_top_left_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_top_left_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_top_left_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_top_left_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_top_left_background_color
-void format_corner_top_left_background_color(format_t format, color_t value);
+format_t format_corner_top_left_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_top_left_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_top_left_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_top_left_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_top_right
-void format_corner_top_right(format_t format, const std::string value);
+format_t format_corner_top_right(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_corner_top_right(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_corner_top_right(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_top_right(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_top_right_color
-void format_corner_top_right_color(format_t format, color_t value);
+format_t format_corner_top_right_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_top_right_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_top_right_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_top_right_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_top_right_background_color
-void format_corner_top_right_background_color(format_t format, color_t value);
+format_t format_corner_top_right_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_top_right_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_top_right_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_top_right_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_bottom_left
-void format_corner_bottom_left(format_t format, const std::string value);
+format_t format_corner_bottom_left(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_corner_bottom_left(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_corner_bottom_left(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_bottom_left(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_bottom_left_color
-void format_corner_bottom_left_color(format_t format, color_t value);
+format_t format_corner_bottom_left_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_bottom_left_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_bottom_left_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_bottom_left_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_bottom_left_background_color
-void format_corner_bottom_left_background_color(format_t format, color_t value);
+format_t format_corner_bottom_left_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_bottom_left_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_bottom_left_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_bottom_left_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_bottom_right
-void format_corner_bottom_right(format_t format, const std::string value);
+format_t format_corner_bottom_right(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_corner_bottom_right(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_corner_bottom_right(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_bottom_right(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_bottom_right_color
-void format_corner_bottom_right_color(format_t format, color_t value);
+format_t format_corner_bottom_right_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_bottom_right_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_bottom_right_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_bottom_right_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_corner_bottom_right_background_color
-void format_corner_bottom_right_background_color(format_t format, color_t value);
+format_t format_corner_bottom_right_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_corner_bottom_right_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_corner_bottom_right_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_corner_bottom_right_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_column_separator
-void format_column_separator(format_t format, const std::string value);
+format_t format_column_separator(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_column_separator(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_column_separator(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_column_separator(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_column_separator_color
-void format_column_separator_color(format_t format, color_t value);
+format_t format_column_separator_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_column_separator_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_column_separator_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_column_separator_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_column_separator_background_color
-void format_column_separator_background_color(format_t format, color_t value);
+format_t format_column_separator_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_column_separator_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_column_separator_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_column_separator_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_font_align
-void format_font_align(format_t format, font_align_t value);
+format_t format_font_align(format_t format, font_align_t value);
 RcppExport SEXP _tabulate_format_font_align(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< font_align_t >::type value(valueSEXP);
-    format_font_align(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_font_align(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_font_style
-void format_font_style(format_t format, font_style_v value);
+format_t format_font_style(format_t format, font_style_v value);
 RcppExport SEXP _tabulate_format_font_style(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< font_style_v >::type value(valueSEXP);
-    format_font_style(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_font_style(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_font_color
-void format_font_color(format_t format, color_t value);
+format_t format_font_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_font_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_font_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_font_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_font_background_color
-void format_font_background_color(format_t format, color_t value);
+format_t format_font_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_font_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_font_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_font_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_color
-void format_color(format_t format, color_t value);
+format_t format_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_background_color
-void format_background_color(format_t format, color_t value);
+format_t format_background_color(format_t format, color_t value);
 RcppExport SEXP _tabulate_format_background_color(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
-    format_background_color(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_background_color(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_multi_byte_characters
-void format_multi_byte_characters(format_t format, bool value);
+format_t format_multi_byte_characters(format_t format, bool value);
 RcppExport SEXP _tabulate_format_multi_byte_characters(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< bool >::type value(valueSEXP);
-    format_multi_byte_characters(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_multi_byte_characters(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // format_locale
-void format_locale(format_t format, const std::string value);
+format_t format_locale(format_t format, const std::string value);
 RcppExport SEXP _tabulate_format_locale(SEXP formatSEXP, SEXP valueSEXP) {
 BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< format_t >::type format(formatSEXP);
     Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
-    format_locale(format, value);
-    return R_NilValue;
+    rcpp_result_gen = Rcpp::wrap(format_locale(format, value));
+    return rcpp_result_gen;
 END_RCPP
 }
 // row_cell
-cell_t row_cell(row_t row, size_t index);
+cell_t row_cell(row_t row, index_t index);
 RcppExport SEXP _tabulate_row_cell(SEXP rowSEXP, SEXP indexSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< row_t >::type row(rowSEXP);
-    Rcpp::traits::input_parameter< size_t >::type index(indexSEXP);
+    Rcpp::traits::input_parameter< index_t >::type index(indexSEXP);
     rcpp_result_gen = Rcpp::wrap(row_cell(row, index));
+    return rcpp_result_gen;
+END_RCPP
+}
+// row_format
+format_t row_format(row_t row);
+RcppExport SEXP _tabulate_row_format(SEXP rowSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< row_t >::type row(rowSEXP);
+    rcpp_result_gen = Rcpp::wrap(row_format(row));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -1157,6 +1274,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_tabulate_table_add_row", (DL_FUNC) &_tabulate_table_add_row, 2},
     {"_tabulate_table_column", (DL_FUNC) &_tabulate_table_column, 2},
     {"_tabulate_table_row", (DL_FUNC) &_tabulate_table_row, 2},
+    {"_tabulate_table_format", (DL_FUNC) &_tabulate_table_format, 1},
     {"_tabulate_tabulate_format", (DL_FUNC) &_tabulate_tabulate_format, 2},
     {"_tabulate_column_format", (DL_FUNC) &_tabulate_column_format, 1},
     {"_tabulate_column_format_width", (DL_FUNC) &_tabulate_column_format_width, 2},
@@ -1254,6 +1372,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_tabulate_format_multi_byte_characters", (DL_FUNC) &_tabulate_format_multi_byte_characters, 2},
     {"_tabulate_format_locale", (DL_FUNC) &_tabulate_format_locale, 2},
     {"_tabulate_row_cell", (DL_FUNC) &_tabulate_row_cell, 2},
+    {"_tabulate_row_format", (DL_FUNC) &_tabulate_row_format, 1},
     {NULL, NULL, 0}
 };
 

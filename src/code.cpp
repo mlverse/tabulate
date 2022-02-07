@@ -5,19 +5,25 @@ table_t tabulate_table () {
   return tabulate::Table();
 }
 
-// [[Rcpp::export]]
-void table_add_row (table_t table, table_row_t row) {
+// [[Rcpp::export(invisible=true)]]
+table_t table_add_row (table_t table, table_row_t row) {
   table->add_row(row.row_);
+  return table;
 }
 
 // [[Rcpp::export]]
-column_t table_column (table_t table, size_t index) {
+column_t table_column (table_t table, index_t index) {
   return tabulate::Column(table->column(index));
 }
 
 // [[Rcpp::export]]
-row_t table_row (table_t table, size_t index) {
+row_t table_row (table_t table, index_t index) {
   return tabulate::Row(table->row(index));
+}
+
+// [[Rcpp::export]]
+format_t table_format (table_t table) {
+  return table->format();
 }
 
 // [[Rcpp::export]]

@@ -113,3 +113,15 @@ font_style_t::font_style_t (SEXP x) {
 font_style_t::operator tabulate::FontStyle () {
   return font_style_;
 }
+
+index_t::index_t (SEXP x) {
+  auto v = Rcpp::as<size_t>(x);
+  if (v <= 0) {
+    Rcpp::stop("Index should be a value larger or equal to 1.");
+  }
+  index_ = v - 1;
+}
+
+index_t::operator size_t () {
+  return index_;
+}

@@ -29,6 +29,10 @@ table_row <- function(table, index) {
     .Call(`_tabulate_table_row`, table, index)
 }
 
+table_format <- function(table) {
+    .Call(`_tabulate_table_format`, table)
+}
+
 tabulate_format <- function(table, colors) {
     .Call(`_tabulate_tabulate_format`, table, colors)
 }
@@ -415,5 +419,9 @@ format_locale <- function(format, value) {
 
 row_cell <- function(row, index) {
     .Call(`_tabulate_row_cell`, row, index)
+}
+
+row_format <- function(row) {
+    .Call(`_tabulate_row_format`, row)
 }
 

@@ -95,3 +95,10 @@ public:
 };
 
 using font_style_v = vector_t<tabulate::FontStyle, font_style_t>;
+
+class index_t {
+public:
+  size_t index_;
+  index_t (SEXP x);
+  operator size_t ();
+};
