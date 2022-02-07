@@ -1,6 +1,5 @@
-#include <Rcpp.h>
-#define TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES
 #include "tabulate.h"
+#include <Rcpp.h>
 
 using column_format_ptr = Rcpp::XPtr<tabulate::ColumnFormat>;
 using cell_ptr = Rcpp::XPtr<tabulate::Cell>;
