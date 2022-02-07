@@ -20,6 +20,7 @@ LinkingTo:
 Imports: 
     crayon,
     magrittr,
+    rlang,
     Rcpp
 SystemRequirements: C++11
 URL: https://github.com/dfalbel/tabulate
