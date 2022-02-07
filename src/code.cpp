@@ -6,7 +6,7 @@ table_t tabulate_table () {
 }
 
 // [[Rcpp::export]]
-void table_add_row (table_t table, row_t row) {
+void table_add_row (table_t table, table_row_t row) {
   table->add_row(row.row_);
 }
 
@@ -15,6 +15,10 @@ column_t table_column (table_t table, size_t index) {
   return tabulate::Column(table->column(index));
 }
 
+// [[Rcpp::export]]
+row_t table_row (table_t table, size_t index) {
+  return tabulate::Row(table->row(index));
+}
 
 // [[Rcpp::export]]
 std::string tabulate_format (table_t table, bool colors) {

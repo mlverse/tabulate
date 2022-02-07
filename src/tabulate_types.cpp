@@ -15,11 +15,22 @@ std::string ptr_t<tabulate::ColumnFormat>::name () {
   return "tabulate_column_format";
 }
 
-row_t::operator SEXP () const {
-  return Rcpp::wrap("lalala");
+template<>
+std::string ptr_t<tabulate::Row>::name () {
+  return "tabulate_row";
 }
 
-row_t::row_t (SEXP x) {
+template<>
+std::string ptr_t<tabulate::Cell>::name () {
+  return "tabulate_cell";
+}
+
+template<>
+std::string ptr_t<tabulate::Format>::name () {
+  return "tabulate_format";
+}
+
+table_row_t::table_row_t (SEXP x) {
   auto vec = Rcpp::as<std::vector<std::string>>(x);
   for (auto& elem: vec) {
     row_.push_back(elem);
@@ -88,7 +99,7 @@ font_style_t::font_style_t (SEXP x) {
     font_style_ = tabulate::FontStyle::reverse;
   } else if (str == "concealed") {
     font_style_ = tabulate::FontStyle::concealed;
-  } else if (str == "rossed") {
+  } else if (str == "crossed") {
     font_style_ = tabulate::FontStyle::crossed;
   } else {
     Rcpp::stop("Unsupported font style type: " + str);

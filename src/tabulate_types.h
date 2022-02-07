@@ -36,15 +36,26 @@ std::string ptr_t<tabulate::Column>::name ();
 template<>
 std::string ptr_t<tabulate::ColumnFormat>::name ();
 
+template<>
+std::string ptr_t<tabulate::Row>::name ();
+
+template<>
+std::string ptr_t<tabulate::Cell>::name ();
+
+template<>
+std::string ptr_t<tabulate::Format>::name ();
+
 using table_t = ptr_t<tabulate::Table>;
 using column_t = ptr_t<tabulate::Column>;
 using column_format_t = ptr_t<tabulate::ColumnFormat>;
+using row_t = ptr_t<tabulate::Row>;
+using cell_t = ptr_t<tabulate::Cell>;
+using format_t = ptr_t<tabulate::Format>;
 
-class row_t {
+class table_row_t {
 public:
   tabulate::Table::Row_t row_;
-  operator SEXP () const;
-  row_t (SEXP x);
+  table_row_t (SEXP x);
 };
 
 class font_align_t {
