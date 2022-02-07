@@ -144,6 +144,325 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// column_format_border
+void column_format_border(column_format_t column, const std::string& value);
+RcppExport SEXP _tabulate_column_format_border(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string& >::type value(valueSEXP);
+    column_format_border(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_color
+void column_format_border_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_background_color
+void column_format_border_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_left
+void column_format_border_left(column_format_t column, const std::string value);
+RcppExport SEXP _tabulate_column_format_border_left(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
+    column_format_border_left(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_left_color
+void column_format_border_left_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_left_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_left_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_left_background_color
+void column_format_border_left_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_left_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_left_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_right
+void column_format_border_right(column_format_t column, const std::string value);
+RcppExport SEXP _tabulate_column_format_border_right(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
+    column_format_border_right(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_right_color
+void column_format_border_right_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_right_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_right_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_right_background_color
+void column_format_border_right_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_right_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_right_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_top
+void column_format_border_top(column_format_t column, const std::string value);
+RcppExport SEXP _tabulate_column_format_border_top(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
+    column_format_border_top(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_top_color
+void column_format_border_top_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_top_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_top_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_top_background_color
+void column_format_border_top_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_top_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_top_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_bottom
+void column_format_border_bottom(column_format_t column, const std::string value);
+RcppExport SEXP _tabulate_column_format_border_bottom(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
+    column_format_border_bottom(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_bottom_color
+void column_format_border_bottom_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_bottom_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_bottom_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_border_bottom_background_color
+void column_format_border_bottom_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_border_bottom_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_border_bottom_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_corner
+void column_format_corner(column_format_t column, const std::string value);
+RcppExport SEXP _tabulate_column_format_corner(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
+    column_format_corner(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_corner_color
+void column_format_corner_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_corner_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_corner_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_corner_background_color
+void column_format_corner_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_corner_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_corner_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_column_separator
+void column_format_column_separator(column_format_t column, const std::string value);
+RcppExport SEXP _tabulate_column_format_column_separator(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
+    column_format_column_separator(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_column_separator_color
+void column_format_column_separator_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_column_separator_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_column_separator_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_column_separator_background_color
+void column_format_column_separator_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_column_separator_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_column_separator_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_font_align
+void column_format_font_align(column_format_t column, font_align_t value);
+RcppExport SEXP _tabulate_column_format_font_align(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< font_align_t >::type value(valueSEXP);
+    column_format_font_align(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_font_style
+void column_format_font_style(column_format_t column, font_style_v value);
+RcppExport SEXP _tabulate_column_format_font_style(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< font_style_v >::type value(valueSEXP);
+    column_format_font_style(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_font_color
+void column_format_font_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_font_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_font_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_font_background_color
+void column_format_font_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_font_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_font_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_color
+void column_format_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_background_color
+void column_format_background_color(column_format_t column, color_t value);
+RcppExport SEXP _tabulate_column_format_background_color(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< color_t >::type value(valueSEXP);
+    column_format_background_color(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_multi_byte_characters
+void column_format_multi_byte_characters(column_format_t column, bool value);
+RcppExport SEXP _tabulate_column_format_multi_byte_characters(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< bool >::type value(valueSEXP);
+    column_format_multi_byte_characters(column, value);
+    return R_NilValue;
+END_RCPP
+}
+// column_format_locale
+void column_format_locale(column_format_t column, const std::string value);
+RcppExport SEXP _tabulate_column_format_locale(SEXP columnSEXP, SEXP valueSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< column_format_t >::type column(columnSEXP);
+    Rcpp::traits::input_parameter< const std::string >::type value(valueSEXP);
+    column_format_locale(column, value);
+    return R_NilValue;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_tabulate_tabulate_table", (DL_FUNC) &_tabulate_tabulate_table, 0},
@@ -158,6 +477,35 @@ static const R_CallMethodDef CallEntries[] = {
     {"_tabulate_column_format_padding_right", (DL_FUNC) &_tabulate_column_format_padding_right, 2},
     {"_tabulate_column_format_padding_top", (DL_FUNC) &_tabulate_column_format_padding_top, 2},
     {"_tabulate_column_format_padding_bottom", (DL_FUNC) &_tabulate_column_format_padding_bottom, 2},
+    {"_tabulate_column_format_border", (DL_FUNC) &_tabulate_column_format_border, 2},
+    {"_tabulate_column_format_border_color", (DL_FUNC) &_tabulate_column_format_border_color, 2},
+    {"_tabulate_column_format_border_background_color", (DL_FUNC) &_tabulate_column_format_border_background_color, 2},
+    {"_tabulate_column_format_border_left", (DL_FUNC) &_tabulate_column_format_border_left, 2},
+    {"_tabulate_column_format_border_left_color", (DL_FUNC) &_tabulate_column_format_border_left_color, 2},
+    {"_tabulate_column_format_border_left_background_color", (DL_FUNC) &_tabulate_column_format_border_left_background_color, 2},
+    {"_tabulate_column_format_border_right", (DL_FUNC) &_tabulate_column_format_border_right, 2},
+    {"_tabulate_column_format_border_right_color", (DL_FUNC) &_tabulate_column_format_border_right_color, 2},
+    {"_tabulate_column_format_border_right_background_color", (DL_FUNC) &_tabulate_column_format_border_right_background_color, 2},
+    {"_tabulate_column_format_border_top", (DL_FUNC) &_tabulate_column_format_border_top, 2},
+    {"_tabulate_column_format_border_top_color", (DL_FUNC) &_tabulate_column_format_border_top_color, 2},
+    {"_tabulate_column_format_border_top_background_color", (DL_FUNC) &_tabulate_column_format_border_top_background_color, 2},
+    {"_tabulate_column_format_border_bottom", (DL_FUNC) &_tabulate_column_format_border_bottom, 2},
+    {"_tabulate_column_format_border_bottom_color", (DL_FUNC) &_tabulate_column_format_border_bottom_color, 2},
+    {"_tabulate_column_format_border_bottom_background_color", (DL_FUNC) &_tabulate_column_format_border_bottom_background_color, 2},
+    {"_tabulate_column_format_corner", (DL_FUNC) &_tabulate_column_format_corner, 2},
+    {"_tabulate_column_format_corner_color", (DL_FUNC) &_tabulate_column_format_corner_color, 2},
+    {"_tabulate_column_format_corner_background_color", (DL_FUNC) &_tabulate_column_format_corner_background_color, 2},
+    {"_tabulate_column_format_column_separator", (DL_FUNC) &_tabulate_column_format_column_separator, 2},
+    {"_tabulate_column_format_column_separator_color", (DL_FUNC) &_tabulate_column_format_column_separator_color, 2},
+    {"_tabulate_column_format_column_separator_background_color", (DL_FUNC) &_tabulate_column_format_column_separator_background_color, 2},
+    {"_tabulate_column_format_font_align", (DL_FUNC) &_tabulate_column_format_font_align, 2},
+    {"_tabulate_column_format_font_style", (DL_FUNC) &_tabulate_column_format_font_style, 2},
+    {"_tabulate_column_format_font_color", (DL_FUNC) &_tabulate_column_format_font_color, 2},
+    {"_tabulate_column_format_font_background_color", (DL_FUNC) &_tabulate_column_format_font_background_color, 2},
+    {"_tabulate_column_format_color", (DL_FUNC) &_tabulate_column_format_color, 2},
+    {"_tabulate_column_format_background_color", (DL_FUNC) &_tabulate_column_format_background_color, 2},
+    {"_tabulate_column_format_multi_byte_characters", (DL_FUNC) &_tabulate_column_format_multi_byte_characters, 2},
+    {"_tabulate_column_format_locale", (DL_FUNC) &_tabulate_column_format_locale, 2},
     {NULL, NULL, 0}
 };
 

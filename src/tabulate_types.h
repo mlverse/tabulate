@@ -75,7 +75,7 @@ public:
   vector_t (SEXP x) {
     auto vec = Rcpp::as<std::vector<std::string>>(x);
     for (auto& elem: vec) {
-      buf_.push_back(elem);
+      buf_.push_back(W(Rcpp::wrap(elem)));
     }
   }
   operator std::vector<T> () {

@@ -49,3 +49,119 @@ column_format_padding_bottom <- function(column, value) {
     invisible(.Call(`_tabulate_column_format_padding_bottom`, column, value))
 }
 
+column_format_border <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border`, column, value))
+}
+
+column_format_border_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_color`, column, value))
+}
+
+column_format_border_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_background_color`, column, value))
+}
+
+column_format_border_left <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_left`, column, value))
+}
+
+column_format_border_left_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_left_color`, column, value))
+}
+
+column_format_border_left_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_left_background_color`, column, value))
+}
+
+column_format_border_right <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_right`, column, value))
+}
+
+column_format_border_right_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_right_color`, column, value))
+}
+
+column_format_border_right_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_right_background_color`, column, value))
+}
+
+column_format_border_top <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_top`, column, value))
+}
+
+column_format_border_top_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_top_color`, column, value))
+}
+
+column_format_border_top_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_top_background_color`, column, value))
+}
+
+column_format_border_bottom <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_bottom`, column, value))
+}
+
+column_format_border_bottom_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_bottom_color`, column, value))
+}
+
+column_format_border_bottom_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_border_bottom_background_color`, column, value))
+}
+
+column_format_corner <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_corner`, column, value))
+}
+
+column_format_corner_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_corner_color`, column, value))
+}
+
+column_format_corner_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_corner_background_color`, column, value))
+}
+
+column_format_column_separator <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_column_separator`, column, value))
+}
+
+column_format_column_separator_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_column_separator_color`, column, value))
+}
+
+column_format_column_separator_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_column_separator_background_color`, column, value))
+}
+
+column_format_font_align <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_font_align`, column, value))
+}
+
+column_format_font_style <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_font_style`, column, value))
+}
+
+column_format_font_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_font_color`, column, value))
+}
+
+column_format_font_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_font_background_color`, column, value))
+}
+
+column_format_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_color`, column, value))
+}
+
+column_format_background_color <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_background_color`, column, value))
+}
+
+column_format_multi_byte_characters <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_multi_byte_characters`, column, value))
+}
+
+column_format_locale <- function(column, value) {
+    invisible(.Call(`_tabulate_column_format_locale`, column, value))
+}
+
