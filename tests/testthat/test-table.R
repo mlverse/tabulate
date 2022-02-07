@@ -20,3 +20,22 @@ test_that("can index tables", {
   expect_error(table[,,])
   expect_error(table[,,1])
 })
+
+test_that("can nest tables", {
+
+  animal <- tabulate_table()
+  table_add_row(animal, "Animal")
+
+  animal_properties <- tabulate_table()
+  table_add_row(animal_properties, "+age: Int")
+  table_add_row(animal_properties, "+gender: String")
+
+  animal_methods <- tabulate_table()
+  table_add_row(animal_methods, "+isMammal()")
+  table_add_row(animal_methods, "+mate()")
+
+  table_add_row(animal, animal_properties)
+  table_add_row(animal, animal_methods)
+
+  expect_snapshot(print(animal))
+})

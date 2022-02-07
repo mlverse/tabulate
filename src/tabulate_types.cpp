@@ -31,9 +31,13 @@ std::string ptr_t<tabulate::Format>::name () {
 }
 
 table_row_t::table_row_t (SEXP x) {
-  auto vec = Rcpp::as<std::vector<std::string>>(x);
-  for (auto& elem: vec) {
-    row_.push_back(elem);
+  if (TYPEOF(x) == EXTPTRSXP) {
+    row_.push_back(*Rcpp::as<table_t>(x));
+  } else {
+    auto vec = Rcpp::as<std::vector<std::string>>(x);
+    for (auto& elem: vec) {
+      row_.push_back(elem);
+    }
   }
 }
 
