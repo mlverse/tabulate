@@ -77,18 +77,53 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>The goal of tabulate is to …</p>
+<p>Tabulate is a thin wrapper around the <a href="https://github.com/p-ranav/tabulate" class="external-link">tabulate C++ library</a>. It allows users to pretty print tables in the console, with support for different font styles, colors, borders and etc. It also supports multi-bytes characters and nesting tables.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the development version of tabulate from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"dfalbel/tabulate"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"dfalbel/tabulate"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
+<p>The following example shows basic functionality of tabulate. Like formatting and coloring the output. Note that color and font styles are only suppported in platforms that support ANSI strings. For a colored version of this table see this <a href="file:///Users/dfalbel/Documents/tabulate/docs/articles/employees.html">link</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dfalbel/tabulate" class="external-link">tabulate</a></span><span class="op">)</span>
+<span class="va">department</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/tabulate_table.html">tabulate_table</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/tabulate_table.html">table_add_row</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Research"</span>, <span class="st">"Engineering"</span><span class="op">)</span><span class="op">)</span>
+
+<span class="va">employees</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/tabulate_table.html">tabulate_table</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/tabulate_table.html">table_add_row</a></span><span class="op">(</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Emp. ID"</span>, <span class="st">"First Name"</span>, <span class="st">"Last Name"</span>, <span class="st">"Department / Business Unit"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/tabulate_table.html">table_add_row</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"101"</span>, <span class="st">"Donald"</span>, <span class="st">"Patrick"</span>, <span class="st">"Finance"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/tabulate_table.html">table_add_row</a></span><span class="op">(</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"102"</span>, <span class="st">"Rachel"</span>, <span class="st">"Williams"</span>, 
+      <span class="st">"Marketing and Operational\nLogistics Planning"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/tabulate_table.html">table_add_row</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"103"</span>, <span class="st">"Ian"</span>, <span class="st">"Jacob"</span>, <span class="va">department</span><span class="op">)</span><span class="op">)</span>
+  
+<span class="va">employees</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/formatting.html">format_font_style</a></span><span class="op">(</span><span class="st">"bold"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/formatting.html">format_font_color</a></span><span class="op">(</span><span class="st">"white"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/formatting.html">format_font_align</a></span><span class="op">(</span><span class="st">"right"</span><span class="op">)</span>
+
+<span class="va">employees</span><span class="op">[</span>,<span class="fl">4</span><span class="op">]</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="reference/formatting.html">format_font_align</a></span><span class="op">(</span><span class="st">"center"</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">employees</span><span class="op">)</span>
+<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
+<span class="co">#&gt; | Emp. ID | First Name | Last Name | Department / Business Unit |</span>
+<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
+<span class="co">#&gt; |     101 | Donald     | Patrick   |           Finance          |</span>
+<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
+<span class="co">#&gt; |     102 | Rachel     | Williams  |  Marketing and Operational |</span>
+<span class="co">#&gt; |         |            |           |     Logistics Planning     |</span>
+<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
+<span class="co">#&gt; |     103 | Ian        | Jacob     | +----------+-------------+ |</span>
+<span class="co">#&gt; |         |            |           | | Research | Engineering | |</span>
+<span class="co">#&gt; |         |            |           | +----------+-------------+ |</span>
+<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
