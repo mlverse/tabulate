@@ -4,7 +4,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/dfalbel/tabulate/workflows/R-CMD-check/badge.svg)](https://github.com/dfalbel/tabulate/actions)
+[![R-CMD-check](https://github.com/mlverse/tabulate/workflows/R-CMD-check/badge.svg)](https://github.com/mlverse/tabulate/actions)
 <!-- badges: end -->
 
 Tabulate is a thin wrapper around the [tabulate C++
@@ -20,7 +20,7 @@ You can install the development version of tabulate from
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("dfalbel/tabulate")
+remotes::install_github("mlverse/tabulate")
 ```
 
 ## Example
@@ -29,7 +29,7 @@ The following example shows basic functionality of tabulate. Like
 formatting and coloring the output. Note that color and font styles are
 only suppported in platforms that support ANSI strings. For a colored
 version of this table see this
-[link](https://dfalbel.github.io/tabulate/articles/unicode.html).
+[link](https://mlverse.github.io/tabulate/articles/unicode.html).
 
 ``` r
 library(tabulate)
@@ -56,5 +56,5 @@ print(employees)
 
 <img src="man/figures/README-/table.svg" width="100%" />
 
-See the [example gallery](https://dfalbel.github.io/tabulate/articles/)
+See the [example gallery](https://mlverse.github.io/tabulate/articles/)
 for more.

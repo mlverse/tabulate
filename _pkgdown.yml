@@ -1,7 +1,7 @@
 template:
   bootstrap: 5
 
-url: https://dfalbel.github.io/tabulate/
+url: https://mlverse.github.io/tabulate/
 
 articles:
 - title: Examples
