@@ -185,236 +185,236 @@ column_format_locale <- function(column, value) {
     invisible(.Call(`_tabulate_column_format_locale`, column, value))
 }
 
-format_width <- function(format, value) {
-    invisible(.Call(`_tabulate_format_width`, format, value))
+c_format_width <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_width`, format, value))
 }
 
-format_height <- function(format, value) {
-    invisible(.Call(`_tabulate_format_height`, format, value))
+c_format_height <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_height`, format, value))
 }
 
-format_padding <- function(format, value) {
-    invisible(.Call(`_tabulate_format_padding`, format, value))
+c_format_padding <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_padding`, format, value))
 }
 
-format_padding_left <- function(format, value) {
-    invisible(.Call(`_tabulate_format_padding_left`, format, value))
+c_format_padding_left <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_padding_left`, format, value))
 }
 
-format_padding_right <- function(format, value) {
-    invisible(.Call(`_tabulate_format_padding_right`, format, value))
+c_format_padding_right <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_padding_right`, format, value))
 }
 
-format_padding_top <- function(format, value) {
-    invisible(.Call(`_tabulate_format_padding_top`, format, value))
+c_format_padding_top <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_padding_top`, format, value))
 }
 
-format_padding_bottom <- function(format, value) {
-    invisible(.Call(`_tabulate_format_padding_bottom`, format, value))
+c_format_padding_bottom <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_padding_bottom`, format, value))
 }
 
-format_border <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border`, format, value))
+c_format_border <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border`, format, value))
 }
 
-format_border_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_color`, format, value))
+c_format_border_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_color`, format, value))
 }
 
-format_border_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_background_color`, format, value))
+c_format_border_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_background_color`, format, value))
 }
 
-format_border_left <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_left`, format, value))
+c_format_border_left <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_left`, format, value))
 }
 
-format_border_left_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_left_color`, format, value))
+c_format_border_left_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_left_color`, format, value))
 }
 
-format_border_left_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_left_background_color`, format, value))
+c_format_border_left_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_left_background_color`, format, value))
 }
 
-format_border_right <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_right`, format, value))
+c_format_border_right <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_right`, format, value))
 }
 
-format_border_right_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_right_color`, format, value))
+c_format_border_right_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_right_color`, format, value))
 }
 
-format_border_right_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_right_background_color`, format, value))
+c_format_border_right_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_right_background_color`, format, value))
 }
 
-format_border_top <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_top`, format, value))
+c_format_border_top <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_top`, format, value))
 }
 
-format_border_top_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_top_color`, format, value))
+c_format_border_top_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_top_color`, format, value))
 }
 
-format_border_top_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_top_background_color`, format, value))
+c_format_border_top_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_top_background_color`, format, value))
 }
 
-format_border_bottom <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_bottom`, format, value))
+c_format_border_bottom <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_bottom`, format, value))
 }
 
-format_border_bottom_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_bottom_color`, format, value))
+c_format_border_bottom_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_bottom_color`, format, value))
 }
 
-format_border_bottom_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_border_bottom_background_color`, format, value))
+c_format_border_bottom_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_border_bottom_background_color`, format, value))
 }
 
-format_show_border <- function(format) {
-    invisible(.Call(`_tabulate_format_show_border`, format))
+c_format_show_border <- function(format) {
+    invisible(.Call(`_tabulate_c_format_show_border`, format))
 }
 
-format_hide_border <- function(format) {
-    invisible(.Call(`_tabulate_format_hide_border`, format))
+c_format_hide_border <- function(format) {
+    invisible(.Call(`_tabulate_c_format_hide_border`, format))
 }
 
-format_show_border_top <- function(format) {
-    invisible(.Call(`_tabulate_format_show_border_top`, format))
+c_format_show_border_top <- function(format) {
+    invisible(.Call(`_tabulate_c_format_show_border_top`, format))
 }
 
-format_hide_border_top <- function(format) {
-    invisible(.Call(`_tabulate_format_hide_border_top`, format))
+c_format_hide_border_top <- function(format) {
+    invisible(.Call(`_tabulate_c_format_hide_border_top`, format))
 }
 
-format_show_border_bottom <- function(format) {
-    invisible(.Call(`_tabulate_format_show_border_bottom`, format))
+c_format_show_border_bottom <- function(format) {
+    invisible(.Call(`_tabulate_c_format_show_border_bottom`, format))
 }
 
-format_hide_border_bottom <- function(format) {
-    invisible(.Call(`_tabulate_format_hide_border_bottom`, format))
+c_format_hide_border_bottom <- function(format) {
+    invisible(.Call(`_tabulate_c_format_hide_border_bottom`, format))
 }
 
-format_show_border_left <- function(format) {
-    invisible(.Call(`_tabulate_format_show_border_left`, format))
+c_format_show_border_left <- function(format) {
+    invisible(.Call(`_tabulate_c_format_show_border_left`, format))
 }
 
-format_hide_border_left <- function(format) {
-    invisible(.Call(`_tabulate_format_hide_border_left`, format))
+c_format_hide_border_left <- function(format) {
+    invisible(.Call(`_tabulate_c_format_hide_border_left`, format))
 }
 
-format_show_border_right <- function(format) {
-    invisible(.Call(`_tabulate_format_show_border_right`, format))
+c_format_show_border_right <- function(format) {
+    invisible(.Call(`_tabulate_c_format_show_border_right`, format))
 }
 
-format_hide_border_right <- function(format) {
-    invisible(.Call(`_tabulate_format_hide_border_right`, format))
+c_format_hide_border_right <- function(format) {
+    invisible(.Call(`_tabulate_c_format_hide_border_right`, format))
 }
 
-format_corner <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner`, format, value))
+c_format_corner <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner`, format, value))
 }
 
-format_corner_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_color`, format, value))
+c_format_corner_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_color`, format, value))
 }
 
-format_corner_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_background_color`, format, value))
+c_format_corner_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_background_color`, format, value))
 }
 
-format_corner_top_left <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_top_left`, format, value))
+c_format_corner_top_left <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_top_left`, format, value))
 }
 
-format_corner_top_left_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_top_left_color`, format, value))
+c_format_corner_top_left_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_top_left_color`, format, value))
 }
 
-format_corner_top_left_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_top_left_background_color`, format, value))
+c_format_corner_top_left_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_top_left_background_color`, format, value))
 }
 
-format_corner_top_right <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_top_right`, format, value))
+c_format_corner_top_right <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_top_right`, format, value))
 }
 
-format_corner_top_right_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_top_right_color`, format, value))
+c_format_corner_top_right_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_top_right_color`, format, value))
 }
 
-format_corner_top_right_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_top_right_background_color`, format, value))
+c_format_corner_top_right_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_top_right_background_color`, format, value))
 }
 
-format_corner_bottom_left <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_bottom_left`, format, value))
+c_format_corner_bottom_left <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_bottom_left`, format, value))
 }
 
-format_corner_bottom_left_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_bottom_left_color`, format, value))
+c_format_corner_bottom_left_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_bottom_left_color`, format, value))
 }
 
-format_corner_bottom_left_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_bottom_left_background_color`, format, value))
+c_format_corner_bottom_left_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_bottom_left_background_color`, format, value))
 }
 
-format_corner_bottom_right <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_bottom_right`, format, value))
+c_format_corner_bottom_right <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_bottom_right`, format, value))
 }
 
-format_corner_bottom_right_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_bottom_right_color`, format, value))
+c_format_corner_bottom_right_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_bottom_right_color`, format, value))
 }
 
-format_corner_bottom_right_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_corner_bottom_right_background_color`, format, value))
+c_format_corner_bottom_right_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_corner_bottom_right_background_color`, format, value))
 }
 
-format_column_separator <- function(format, value) {
-    invisible(.Call(`_tabulate_format_column_separator`, format, value))
+c_format_column_separator <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_column_separator`, format, value))
 }
 
-format_column_separator_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_column_separator_color`, format, value))
+c_format_column_separator_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_column_separator_color`, format, value))
 }
 
-format_column_separator_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_column_separator_background_color`, format, value))
+c_format_column_separator_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_column_separator_background_color`, format, value))
 }
 
-format_font_align <- function(format, value) {
-    invisible(.Call(`_tabulate_format_font_align`, format, value))
+c_format_font_align <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_font_align`, format, value))
 }
 
-format_font_style <- function(format, value) {
-    invisible(.Call(`_tabulate_format_font_style`, format, value))
+c_format_font_style <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_font_style`, format, value))
 }
 
-format_font_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_font_color`, format, value))
+c_format_font_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_font_color`, format, value))
 }
 
-format_font_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_font_background_color`, format, value))
+c_format_font_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_font_background_color`, format, value))
 }
 
-format_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_color`, format, value))
+c_format_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_color`, format, value))
 }
 
-format_background_color <- function(format, value) {
-    invisible(.Call(`_tabulate_format_background_color`, format, value))
+c_format_background_color <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_background_color`, format, value))
 }
 
-format_multi_byte_characters <- function(format, value) {
-    invisible(.Call(`_tabulate_format_multi_byte_characters`, format, value))
+c_format_multi_byte_characters <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_multi_byte_characters`, format, value))
 }
 
-format_locale <- function(format, value) {
-    invisible(.Call(`_tabulate_format_locale`, format, value))
+c_format_locale <- function(format, value) {
+    invisible(.Call(`_tabulate_c_format_locale`, format, value))
 }
 
 row_cell <- function(row, index) {

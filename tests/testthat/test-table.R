@@ -48,7 +48,6 @@ test_that("can set table configs", {
     table_add_row("world")
 
   table %>%
-    table_format() %>%
     format_hide_border_bottom() %>%
     format_width(50)
 

@@ -19,7 +19,6 @@ library(tabulate)
 # Global styling
 class_diagram <- tabulate_table()
 class_diagram %>% 
-  table_format() %>% 
   format_font_style("bold") %>% 
   format_font_align("center") %>% 
   format_width(60)
@@ -28,7 +27,6 @@ class_diagram %>%
 animal <- tabulate_table() %>% 
   table_add_row("Animal")
 animal[1,] %>% 
-  row_format() %>% 
   format_font_align("center")
 
 # Animal properties nested table
@@ -37,11 +35,9 @@ animal_properties <- tabulate_table() %>%
   table_add_row("+gender: String")
 
 animal_properties %>% 
-  table_format() %>% 
   format_width(20)
 
 animal_properties[2,] %>% 
-  row_format() %>% 
   format_hide_border_top()
 
 # Animal methods nested table
@@ -50,11 +46,9 @@ animal_methods <- tabulate_table() %>%
   table_add_row("+mate()")
 
 animal_methods %>% 
-  table_format() %>% 
   format_width(20)
 
 animal_methods[2,] %>% 
-  row_format() %>% 
   format_hide_border_top()
 
 animal %>% 
@@ -62,7 +56,6 @@ animal %>%
   table_add_row(animal_methods)
 
 animal[3,] %>% 
-  row_format() %>% 
   format_hide_border_top()
 
 class_diagram %>% 
@@ -73,33 +66,28 @@ class_diagram %>%
 class_diagram %>% 
   table_add_row("▲");
 class_diagram[2,1] %>% 
-  cell_format() %>% 
   format_hide_border_top() %>% 
   format_multi_byte_characters(TRUE)
 
 class_diagram %>% 
   table_add_row({"|"})
 class_diagram[3,] %>% 
-  row_format() %>% 
   format_hide_border_top()
 class_diagram %>% 
   table_add_row({"|"})
 class_diagram[4,] %>% 
-  row_format() %>% 
   format_hide_border_top()
 
 # Duck class
 duck <- tabulate_table() %>% 
   table_add_row("Duck")
 duck[1,] %>% 
-  row_format() %>% 
   format_font_align("center")
 
 # Duck properties nested table
 duck_properties <- tabulate_table() %>% 
   table_add_row("+beakColor: String = \"yellow\"")
 duck_properties %>% 
-  table_format() %>% 
   format_width(40)
 
 # Duck methods
@@ -107,10 +95,8 @@ duck_methods <- tabulate_table() %>%
   table_add_row("+swim()") %>% 
   table_add_row("+quack()")
 duck_methods %>% 
-  table_format() %>% 
   format_width(40)
 duck_methods[2,] %>% 
-  row_format() %>% 
   format_hide_border_top()
 
 duck %>% 
@@ -121,7 +107,6 @@ class_diagram %>%
   table_add_row(duck)
 
 class_diagram[5,] %>%
-  row_format() %>%
   format_hide_border_top()
 
 print(class_diagram)
