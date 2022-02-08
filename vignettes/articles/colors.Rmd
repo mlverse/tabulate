@@ -5,26 +5,32 @@ title: "Colors"
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  out.width = "100%"
 )
 
 # Turn on ANSI colors
-options(cli.num_colors = 256L)
-old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
+#options(cli.num_colors = 256L)
+#old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
 ```
 
 ```{r setup}
 library(tabulate)
 ```
 
-:::downlit
 ```{r}
 colors <- tabulate_table()
 
 colors %>% 
-  table_add_row(c("Font Color is Red", "Font Color is Blue", "Font Color is Green")) %>% 
-  table_add_row(c("Everything is Red", "Everything is Blue", "Everything is Green")) %>% 
-  table_add_row(c("Font Background is Red", "Font Background is Blue", "Font Background is Green"))
+  table_add_row(
+    c("Font Color is Red", "Font Color is Blue", "Font Color is Green")) %>% 
+  table_add_row(
+    c("Everything is Red", "Everything is Blue", "Everything is Green")) %>% 
+  table_add_row(
+    c("Font Background is Red", "Font Background is Blue", 
+      "Font Background is Green"))
+
+colors %>% format_width(16)
 
 colors[1,1] %>% format_font_color("red") %>% format_font_style("bold")
 colors[1,2] %>% format_font_color("blue") %>% format_font_style("bold")
@@ -50,12 +56,17 @@ colors[2,3] %>%
   format_border_right_color("green") %>% 
   format_border_right_background_color("green")
 
-colors[3,1] %>% format_font_background_color("red") %>% format_font_style("bold")
-colors[3,2] %>% format_font_background_color("blue") %>% format_font_style("bold")
-colors[3,3] %>% format_font_background_color("green") %>% format_font_style("bold")
+colors[3,1] %>% 
+  format_font_background_color("red") %>% 
+  format_font_style("bold")
+colors[3,2] %>% 
+  format_font_background_color("blue") %>% 
+  format_font_style("bold")
+colors[3,3] %>% 
+  format_font_background_color("green") %>% 
+  format_font_style("bold")
 
 print(colors)
 ```
-:::
 
 

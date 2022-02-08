@@ -1,2 +1,5 @@
+template:
+  bootstrap: 5
+
 url: https://dfalbel.github.io/tabulate/
 

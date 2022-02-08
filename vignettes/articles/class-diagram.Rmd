@@ -10,8 +10,8 @@ knitr::opts_chunk$set(
 	out.width = "100%"
 )
 # Turn on ANSI colors
-options(cli.num_colors = 256L)
-old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
+# options(cli.num_colors = 256L)
+# old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
 ```
 
 ```{r}
