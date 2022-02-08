@@ -6,12 +6,22 @@ Authors@R: c(
            family = "Falbel", 
            email = "daniel@rstudio.com", 
            role = c("aut", "cre")),
-    person(given = "Pranav", 
+    person(given = "Pranav",
+           family = "Srinivas Kumar",
            role = c("aut", "cph"), 
            comment = "Author of included Tabulate code"),
+    person(given = "Martin", 
+           family = "Moene", 
+           role = c("aut", "cph"), 
+           comment = "Author of included Variant-lite code"),
+    person(given = "Ihor",
+           family = "Kalnytskyi",
+           role = c("aut", "cph"),
+           comment = "Author of included Termcolor code"),
     person(family = "RStudio", role = c("cph")))
 Description: Generates pretty console output for tables allowing for full customization
-  of cell colors, font type, borders and many others attributes.
+  of cell colors, font type, borders and many others attributes. It also supports 'multibyte'
+  characters and nested tables.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

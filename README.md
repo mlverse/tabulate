@@ -15,6 +15,10 @@ nesting tables.
 
 ## Installation
 
+tabulate can be installed from CRAN with:
+
+    install.packages("tabulate")
+
 You can install the development version of tabulate from
 [GitHub](https://github.com/) with:
 
