@@ -42,7 +42,8 @@ nesting tables.
 
 ```{asciicast demo, echo = FALSE}
 #' cols: 140
-#' padding_y: 0
+#' padding_x: 5
+#' padding_y: 5
 tabulate::tabulate_demo()
 ```
 
