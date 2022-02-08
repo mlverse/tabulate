@@ -147,11 +147,13 @@ tabulate_demo <- function() {
     format_padding_left(0) %>%
     format_padding_right(0) %>%
     format_column_separator("") %>%
-    format_hide_border()
+    format_hide_border() %>%
+    format_padding_bottom(0) %>%
+    format_padding_top(0)
 
   for(i in 1:9) {
     chart %>%
-      table_add_row(c(100-i*10, rep(" ", 50)))
+      table_add_row(c(100-i*10, rep("", 50)))
   }
   chart %>%
     table_add_row(ifelse(1:12 %% 4 == 0, 1:12, " "))
@@ -162,7 +164,7 @@ tabulate_demo <- function() {
     format_padding_right(1) %>%
     format_border_left(" ")
 
-  for (i in 2:19) {
+  for (i in 2:18) {
     chart[,i] %>%
       format_width(2)
   }
