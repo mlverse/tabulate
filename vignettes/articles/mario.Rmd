@@ -1,0 +1,211 @@
+---
+title: "Mario"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tabulate)
+```
+
+```{r}
+mario <- tabulate_table()
+mario %>% 
+  format_color("white") %>% 
+  format_border("") %>% 
+  format_corner("") %>% 
+  format_column_separator("") %>% 
+  format_padding(0)
+
+rows <- 16
+cols <- 30
+for (i in seq_len(rows)) {
+  mario %>% table_add_row(rep("█", cols))
+}
+# row 1
+for (i in 8:20) {
+  mario[1, i] %>% format_color("red")
+}
+# row 2
+for (i in 6:26) {
+  mario[2, i] %>% format_color("red")
+}
+# row 3
+for (i in 6:13) {
+ mario[3, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 14:18) {
+ mario[3, i] %>% format_color("yellow")
+}
+for (i in 19:20) {
+ mario[3, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 21:22) {
+ mario[3, i] %>% format_color("yellow")
+}
+# row 4
+for (i in 4:7) {
+ mario[4, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 8:9) {
+ mario[4, i] %>% format_color("yellow")
+}
+for (i in 10:11) {
+ mario[4, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 12:18) {
+ mario[4, i] %>% format_color("yellow")
+}
+for (i in 19:20) {
+ mario[4, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 21:26) {
+ mario[4, i] %>% format_color("yellow")
+}
+# row 5
+for (i in 4:7) {
+ mario[5, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 8:9) {
+ mario[5, i] %>% format_color("yellow")
+}
+for (i in 10:13) {
+ mario[5, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 14:20) {
+ mario[5, i] %>% format_color("yellow")
+}
+for (i in 21:22) {
+ mario[5, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 23:28) {
+ mario[5, i] %>% format_color("yellow")
+}
+# row 6
+for (i in 4:9) {
+ mario[6, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 10:18) {
+ mario[6, i] %>% format_color("yellow")
+}
+for (i in 19:26) {
+ mario[6, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+# row 7
+for (i in 8:24) {
+ mario[7, i] %>% format_color("yellow")
+}
+# row 8
+for (i in 6:11) {
+ mario[8, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 12:13) {
+ mario[8, i] %>% format_color("red")
+}
+for (i in 14:20) {
+ mario[8, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+# row 9
+for (i in 4:11) {
+ mario[9, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 12:13) {
+ mario[9, i] %>% format_color("red")
+}
+for (i in 14:18) {
+ mario[9, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 19:20) {
+ mario[9, i] %>% format_color("red")
+}
+for (i in 21:26) {
+ mario[9, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+# row 10
+for (i in 2:11) {
+ mario[10, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 12:20) {
+ mario[10, i] %>% format_color("red")
+}
+for (i in 21:29) {
+ mario[10, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+# row 11
+for (i in 2:7) {
+ mario[11, i] %>% format_color("yellow")
+}
+for (i in 8:9) {
+ mario[11, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 10:11) {
+ mario[11, i] %>% format_color("red")
+}
+for (i in 12:13) {
+ mario[11, i] %>% format_color("yellow")
+}
+for (i in 14:18) {
+ mario[11, i] %>% format_color("red")
+}
+for (i in 19:20) {
+ mario[11, i] %>% format_color("yellow")
+}
+for (i in 21:22) {
+ mario[11, i] %>% format_color("red")
+}
+for (i in 23:24) {
+ mario[11, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 25:29) {
+ mario[11, i] %>% format_color("yellow")
+}
+# row 12
+for (i in 2:9) {
+ mario[12, i] %>% format_color("yellow")
+}
+for (i in 10:22) {
+ mario[12, i] %>% format_color("red")
+}
+for (i in 22:29) {
+ mario[12, i] %>% format_color("yellow")
+}
+# row 13
+for (i in 2:7) {
+ mario[13, i] %>% format_color("yellow")
+}
+for (i in 8:24) {
+ mario[13, i] %>% format_color("red")
+}
+for (i in 25:29) {
+ mario[13, i] %>% format_color("yellow")
+}
+# row 14
+for (i in 6:14) {
+ mario[14, i] %>% format_color("red")
+}
+for (i in 17:24) {
+ mario[14, i] %>% format_color("red")
+}
+# row 15
+for (i in 4:12) {
+ mario[15, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 19:26) {
+ mario[15, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+# row 16
+for (i in 2:12) {
+ mario[16, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+for (i in 19:29) {
+ mario[16, i] %>% format_color("green") %>% format_font_style("dark") 
+}
+
+print(mario)
+```
+
