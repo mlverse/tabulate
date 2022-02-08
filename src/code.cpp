@@ -1,10 +1,22 @@
 #include "tabulate_types.h"
 
+//' Create a new tabulate table
+//'
+//' @param row A character vector or a tabulate table.
+//'
+//' @examples
+//' table <- tabulate_table() %>%
+//'   table_add_row("hello") %>%
+//'   table_add_row("world")
+//' table
+//' @export
 // [[Rcpp::export]]
 table_t tabulate_table () {
   return table_t(tabulate::Table());
 }
 
+//' @describeIn tabulate_table Adds rows to the table.
+//' @export
 // [[Rcpp::export(invisible=true)]]
 table_t table_add_row (table_t table, table_row_t row) {
   table->add_row(row.row_);

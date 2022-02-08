@@ -142,15 +142,15 @@ format_font_style(x, value)
 
 format_height(x, value)
 
-format_hide_border(x, value)
+format_hide_border(x)
 
-format_hide_border_bottom(x, value)
+format_hide_border_bottom(x)
 
-format_hide_border_left(x, value)
+format_hide_border_left(x)
 
-format_hide_border_right(x, value)
+format_hide_border_right(x)
 
-format_hide_border_top(x, value)
+format_hide_border_top(x)
 
 format_locale(x, value)
 
@@ -166,15 +166,15 @@ format_padding_right(x, value)
 
 format_padding_top(x, value)
 
-format_show_border(x, value)
+format_show_border(x)
 
-format_show_border_bottom(x, value)
+format_show_border_bottom(x)
 
-format_show_border_left(x, value)
+format_show_border_left(x)
 
-format_show_border_right(x, value)
+format_show_border_right(x)
 
-format_show_border_top(x, value)
+format_show_border_top(x)
 
 format_width(x, value)
 }

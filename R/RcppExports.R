@@ -13,10 +13,22 @@ cell_format <- function(cell) {
     .Call(`_tabulate_cell_format`, cell)
 }
 
+#' Create a new tabulate table
+#'
+#' @param row A character vector or a tabulate table.
+#'
+#' @examples
+#' table <- tabulate_table() %>%
+#'   table_add_row("hello") %>%
+#'   table_add_row("world")
+#' table
+#' @export
 tabulate_table <- function() {
     .Call(`_tabulate_tabulate_table`)
 }
 
+#' @describeIn tabulate_table Adds rows to the table.
+#' @export
 table_add_row <- function(table, row) {
     invisible(.Call(`_tabulate_table_add_row`, table, row))
 }
