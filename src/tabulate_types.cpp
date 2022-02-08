@@ -33,11 +33,22 @@ std::string ptr_t<tabulate::Format>::name () {
 table_row_t::table_row_t (SEXP x) {
   if (TYPEOF(x) == EXTPTRSXP) {
     row_.push_back(*Rcpp::as<table_t>(x));
-  } else {
+  } else if (TYPEOF(x) == STRSXP) {
     auto vec = Rcpp::as<std::vector<std::string>>(x);
     for (auto& elem: vec) {
       row_.push_back(elem);
     }
+  } else if (TYPEOF(x) == VECSXP) {
+    auto obj = Rcpp::as<Rcpp::List>(x);
+    for (auto& elem: obj) {
+      if (TYPEOF(elem) == STRSXP) {
+        row_.push_back(Rcpp::as<std::string>(elem));
+      } else if (TYPEOF(elem) == EXTPTRSXP) {
+        row_.push_back(*Rcpp::as<table_t>(elem));
+      }
+    }
+  } else {
+    Rcpp::stop("Unsupported types.");
   }
 }
 

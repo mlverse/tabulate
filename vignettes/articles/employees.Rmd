@@ -1,0 +1,37 @@
+---
+title: "Employees"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tabulate)
+```
+
+```{r}
+department <- tabulate_table() %>% 
+  table_add_row(c("Research", "Engineering"))
+
+employees <- tabulate_table() %>% 
+  table_add_row(
+    c("Emp. ID", "First Name", "Last Name", "Department / Business Unit")) %>% 
+  table_add_row(c("101", "Donald", "Patrick", "Finance")) %>% 
+  table_add_row(
+    c("102", "Rachel", "Williams", 
+      "Marketing and Operational\nLogistics Planning")) %>% 
+  table_add_row(c("103", "Ian", "Jacob", department))
+  
+employees[,1] %>% 
+  format_font_style("bold") %>% 
+  format_font_color("white") %>% 
+  format_font_align("right")
+
+employees[,4] %>% format_font_align("center")
+
+print(employees)
+```
