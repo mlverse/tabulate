@@ -1,4 +1,3 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # tabulate
@@ -45,27 +44,14 @@ employees <- tabulate_table() %>%
     c("102", "Rachel", "Williams", 
       "Marketing and Operational\nLogistics Planning")) %>% 
   table_add_row(c("103", "Ian", "Jacob", department))
-  
+
 employees[,1] %>% 
   format_font_style("bold") %>% 
-  format_font_color("white") %>% 
+  format_font_color("red") %>% 
   format_font_align("right")
 
-employees[,4] %>% format_font_align("center")
+employees[,4] %>% format_font_align("center") 
+print(employees)
 ```
 
-``` r
-print(employees)
-#> +---------+------------+-----------+----------------------------+
-#> | Emp. ID | First Name | Last Name | Department / Business Unit |
-#> +---------+------------+-----------+----------------------------+
-#> |     101 | Donald     | Patrick   |           Finance          |
-#> +---------+------------+-----------+----------------------------+
-#> |     102 | Rachel     | Williams  |  Marketing and Operational |
-#> |         |            |           |     Logistics Planning     |
-#> +---------+------------+-----------+----------------------------+
-#> |     103 | Ian        | Jacob     | +----------+-------------+ |
-#> |         |            |           | | Research | Engineering | |
-#> |         |            |           | +----------+-------------+ |
-#> +---------+------------+-----------+----------------------------+
-```
+<img src="man/figures/README-/table.svg" width="100%" />

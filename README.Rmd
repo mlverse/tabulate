@@ -1,5 +1,8 @@
 ---
-output: github_document
+output:
+  md_document:
+    variant: gfm
+always_allow_html: true
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -10,6 +13,19 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
+)
+# Turn on ANSI colors
+options(cli.num_colors = 256L)
+asciicast::init_knitr_engine(
+  startup = quote({
+    library(tabulate)
+  }),
+  echo = TRUE,
+  echo_input = FALSE,
+  same_process = TRUE,
+  options = list(
+    asciicast_end_wait = 3
+  )
 )
 ```
 
@@ -39,7 +55,7 @@ The following example shows basic functionality of tabulate. Like formatting and
 coloring the output. Note that color and font styles are only suppported in platforms
 that support ANSI strings. For a colored version of this table see this [link](https://dfalbel.github.io/tabulate/articles/unicode.html).
 
-```{r}
+```{asciicast table}
 library(tabulate)
 department <- tabulate_table() %>% 
   table_add_row(c("Research", "Engineering"))
@@ -52,16 +68,13 @@ employees <- tabulate_table() %>%
     c("102", "Rachel", "Williams", 
       "Marketing and Operational\nLogistics Planning")) %>% 
   table_add_row(c("103", "Ian", "Jacob", department))
-  
+
 employees[,1] %>% 
   format_font_style("bold") %>% 
-  format_font_color("white") %>% 
+  format_font_color("red") %>% 
   format_font_align("right")
 
-employees[,4] %>% format_font_align("center")
-```
-
-```{r}
+employees[,4] %>% format_font_align("center") 
 print(employees)
 ```
 
