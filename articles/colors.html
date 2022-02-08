@@ -90,6 +90,7 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dfalbel/tabulate" class="external-link">tabulate</a></span><span class="op">)</span></code></pre></div>
+<div class="downlit">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/tabulate_table.html">tabulate_table</a></span><span class="op">(</span><span class="op">)</span>
 
@@ -127,13 +128,16 @@
 <span class="va">colors</span><span class="op">[</span><span class="fl">3</span>,<span class="fl">3</span><span class="op">]</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/formatting.html">format_font_background_color</a></span><span class="op">(</span><span class="st">"green"</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="../reference/formatting.html">format_font_style</a></span><span class="op">(</span><span class="st">"bold"</span><span class="op">)</span>
 
 <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">colors</span><span class="op">)</span></code></pre></div>
-<pre class="fansi fansi-output"><code><span class="co">#&gt; +------------------------+-------------------------+--------------------------+</span>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#&gt; +------------------------+-------------------------+--------------------------+</span>
 <span class="co">#&gt; | Font Color is Red      | Font Color is Blue      | Font Color is Green      |</span>
 <span class="co">#&gt; +------------------------+-------------------------+--------------------------+</span>
 <span class="co">#&gt; | Everything is Red      | Everything is Blue      | Everything is Green      |</span>
 <span class="co">#&gt; +------------------------+-------------------------+--------------------------+</span>
 <span class="co">#&gt; | Font Background is Red | Font Background is Blue | Font Background is Green |</span>
-<span class="co">#&gt; +------------------------+-------------------------+--------------------------+</span></code></pre>
+<span class="co">#&gt; +------------------------+-------------------------+--------------------------+</span>
+</code></pre>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
