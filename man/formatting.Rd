@@ -2,7 +2,7 @@
 % Please edit documentation in R/format.R
 \name{formatting}
 \alias{formatting}
-\alias{format_background_color.default}
+\alias{format_background_color}
 \alias{format_border}
 \alias{format_border_background_color}
 \alias{format_border_bottom}
@@ -62,7 +62,7 @@
 \alias{format_width}
 \title{Formatting of tables, columns, rows and cells}
 \usage{
-format_background_color.default(x, value)
+format_background_color(x, value)
 
 format_border(x, value)
 

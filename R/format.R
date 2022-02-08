@@ -40,9 +40,9 @@ is_column <- function(x) {
 
 #' @rdname formatting
 #' @export
-format_background_color.default <- function(x, value) {
+format_background_color <- function(x, value) {
   if (is_column(x)) {
-    column_format_background_color.default(fmt(x), value)
+    column_format_background_color(fmt(x), value)
     return(invisible(x))
   }
   c_format_background_color(fmt(x), value)
@@ -283,10 +283,6 @@ format_corner_background_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_bottom_left <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_bottom_left(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_bottom_left(fmt(x), value)
   invisible(x)
 }
@@ -294,10 +290,6 @@ format_corner_bottom_left <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_bottom_left_background_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_bottom_left_background_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_bottom_left_background_color(fmt(x), value)
   invisible(x)
 }
@@ -305,10 +297,6 @@ format_corner_bottom_left_background_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_bottom_left_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_bottom_left_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_bottom_left_color(fmt(x), value)
   invisible(x)
 }
@@ -316,10 +304,6 @@ format_corner_bottom_left_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_bottom_right <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_bottom_right(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_bottom_right(fmt(x), value)
   invisible(x)
 }
@@ -327,10 +311,6 @@ format_corner_bottom_right <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_bottom_right_background_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_bottom_right_background_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_bottom_right_background_color(fmt(x), value)
   invisible(x)
 }
@@ -338,10 +318,6 @@ format_corner_bottom_right_background_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_bottom_right_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_bottom_right_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_bottom_right_color(fmt(x), value)
   invisible(x)
 }
@@ -360,10 +336,6 @@ format_corner_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_top_left <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_top_left(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_top_left(fmt(x), value)
   invisible(x)
 }
@@ -371,10 +343,6 @@ format_corner_top_left <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_top_left_background_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_top_left_background_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_top_left_background_color(fmt(x), value)
   invisible(x)
 }
@@ -382,10 +350,6 @@ format_corner_top_left_background_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_top_left_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_top_left_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_top_left_color(fmt(x), value)
   invisible(x)
 }
@@ -393,10 +357,6 @@ format_corner_top_left_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_top_right <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_top_right(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_top_right(fmt(x), value)
   invisible(x)
 }
@@ -404,10 +364,6 @@ format_corner_top_right <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_top_right_background_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_top_right_background_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_top_right_background_color(fmt(x), value)
   invisible(x)
 }
@@ -415,10 +371,6 @@ format_corner_top_right_background_color <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_corner_top_right_color <- function(x, value) {
-  if (is_column(x)) {
-    column_format_corner_top_right_color(fmt(x), value)
-    return(invisible(x))
-  }
   c_format_corner_top_right_color(fmt(x), value)
   invisible(x)
 }
@@ -481,10 +433,6 @@ format_height <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_hide_border <- function(x) {
-  if (is_column(x)) {
-    column_format_hide_border(fmt(x))
-    return(invisible(x))
-  }
   c_format_hide_border(fmt(x))
   invisible(x)
 }
@@ -492,10 +440,6 @@ format_hide_border <- function(x) {
 #' @rdname formatting
 #' @export
 format_hide_border_bottom <- function(x) {
-  if (is_column(x)) {
-    column_format_hide_border_bottom(fmt(x))
-    return(invisible(x))
-  }
   c_format_hide_border_bottom(fmt(x))
   invisible(x)
 }
@@ -503,10 +447,6 @@ format_hide_border_bottom <- function(x) {
 #' @rdname formatting
 #' @export
 format_hide_border_left <- function(x) {
-  if (is_column(x)) {
-    column_format_hide_border_left(fmt(x))
-    return(invisible(x))
-  }
   c_format_hide_border_left(fmt(x))
   invisible(x)
 }
@@ -514,10 +454,6 @@ format_hide_border_left <- function(x) {
 #' @rdname formatting
 #' @export
 format_hide_border_right <- function(x) {
-  if (is_column(x)) {
-    column_format_hide_border_right(fmt(x))
-    return(invisible(x))
-  }
   c_format_hide_border_right(fmt(x))
   invisible(x)
 }
@@ -525,10 +461,6 @@ format_hide_border_right <- function(x) {
 #' @rdname formatting
 #' @export
 format_hide_border_top <- function(x) {
-  if (is_column(x)) {
-    column_format_hide_border_top(fmt(x))
-    return(invisible(x))
-  }
   c_format_hide_border_top(fmt(x))
   invisible(x)
 }
@@ -613,10 +545,6 @@ format_padding_top <- function(x, value) {
 #' @rdname formatting
 #' @export
 format_show_border <- function(x) {
-  if (is_column(x)) {
-    column_format_show_border(fmt(x))
-    return(invisible(x))
-  }
   c_format_show_border(fmt(x))
   invisible(x)
 }
@@ -624,10 +552,6 @@ format_show_border <- function(x) {
 #' @rdname formatting
 #' @export
 format_show_border_bottom <- function(x) {
-  if (is_column(x)) {
-    column_format_show_border_bottom(fmt(x))
-    return(invisible(x))
-  }
   c_format_show_border_bottom(fmt(x))
   invisible(x)
 }
@@ -635,10 +559,6 @@ format_show_border_bottom <- function(x) {
 #' @rdname formatting
 #' @export
 format_show_border_left <- function(x) {
-  if (is_column(x)) {
-    column_format_show_border_left(fmt(x))
-    return(invisible(x))
-  }
   c_format_show_border_left(fmt(x))
   invisible(x)
 }
@@ -646,10 +566,6 @@ format_show_border_left <- function(x) {
 #' @rdname formatting
 #' @export
 format_show_border_right <- function(x) {
-  if (is_column(x)) {
-    column_format_show_border_right(fmt(x))
-    return(invisible(x))
-  }
   c_format_show_border_right(fmt(x))
   invisible(x)
 }
@@ -657,10 +573,6 @@ format_show_border_right <- function(x) {
 #' @rdname formatting
 #' @export
 format_show_border_top <- function(x) {
-  if (is_column(x)) {
-    column_format_show_border_top(fmt(x))
-    return(invisible(x))
-  }
   c_format_show_border_top(fmt(x))
   invisible(x)
 }

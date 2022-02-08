@@ -44,75 +44,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// tabulate_table
-table_t tabulate_table();
-RcppExport SEXP _tabulate_tabulate_table() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(tabulate_table());
-    return rcpp_result_gen;
-END_RCPP
-}
-// table_add_row
-table_t table_add_row(table_t table, table_row_t row);
-RcppExport SEXP _tabulate_table_add_row(SEXP tableSEXP, SEXP rowSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
-    Rcpp::traits::input_parameter< table_row_t >::type row(rowSEXP);
-    rcpp_result_gen = Rcpp::wrap(table_add_row(table, row));
-    return rcpp_result_gen;
-END_RCPP
-}
-// table_column
-column_t table_column(table_t table, index_t index);
-RcppExport SEXP _tabulate_table_column(SEXP tableSEXP, SEXP indexSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
-    Rcpp::traits::input_parameter< index_t >::type index(indexSEXP);
-    rcpp_result_gen = Rcpp::wrap(table_column(table, index));
-    return rcpp_result_gen;
-END_RCPP
-}
-// table_row
-row_t table_row(table_t table, index_t index);
-RcppExport SEXP _tabulate_table_row(SEXP tableSEXP, SEXP indexSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
-    Rcpp::traits::input_parameter< index_t >::type index(indexSEXP);
-    rcpp_result_gen = Rcpp::wrap(table_row(table, index));
-    return rcpp_result_gen;
-END_RCPP
-}
-// table_format
-format_t table_format(table_t table);
-RcppExport SEXP _tabulate_table_format(SEXP tableSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
-    rcpp_result_gen = Rcpp::wrap(table_format(table));
-    return rcpp_result_gen;
-END_RCPP
-}
-// tabulate_format
-std::string tabulate_format(table_t table, bool colors);
-RcppExport SEXP _tabulate_tabulate_format(SEXP tableSEXP, SEXP colorsSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
-    Rcpp::traits::input_parameter< bool >::type colors(colorsSEXP);
-    rcpp_result_gen = Rcpp::wrap(tabulate_format(table, colors));
-    return rcpp_result_gen;
-END_RCPP
-}
 // column_format
 column_format_t column_format(column_t column);
 RcppExport SEXP _tabulate_column_format(SEXP columnSEXP) {
@@ -1265,17 +1196,80 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// tabulate_table
+table_t tabulate_table();
+RcppExport SEXP _tabulate_tabulate_table() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(tabulate_table());
+    return rcpp_result_gen;
+END_RCPP
+}
+// table_add_row
+table_t table_add_row(table_t table, table_row_t row);
+RcppExport SEXP _tabulate_table_add_row(SEXP tableSEXP, SEXP rowSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
+    Rcpp::traits::input_parameter< table_row_t >::type row(rowSEXP);
+    rcpp_result_gen = Rcpp::wrap(table_add_row(table, row));
+    return rcpp_result_gen;
+END_RCPP
+}
+// table_column
+column_t table_column(table_t table, index_t index);
+RcppExport SEXP _tabulate_table_column(SEXP tableSEXP, SEXP indexSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
+    Rcpp::traits::input_parameter< index_t >::type index(indexSEXP);
+    rcpp_result_gen = Rcpp::wrap(table_column(table, index));
+    return rcpp_result_gen;
+END_RCPP
+}
+// table_row
+row_t table_row(table_t table, index_t index);
+RcppExport SEXP _tabulate_table_row(SEXP tableSEXP, SEXP indexSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
+    Rcpp::traits::input_parameter< index_t >::type index(indexSEXP);
+    rcpp_result_gen = Rcpp::wrap(table_row(table, index));
+    return rcpp_result_gen;
+END_RCPP
+}
+// table_format
+format_t table_format(table_t table);
+RcppExport SEXP _tabulate_table_format(SEXP tableSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
+    rcpp_result_gen = Rcpp::wrap(table_format(table));
+    return rcpp_result_gen;
+END_RCPP
+}
+// tabulate_format
+std::string tabulate_format(table_t table, bool colors);
+RcppExport SEXP _tabulate_tabulate_format(SEXP tableSEXP, SEXP colorsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< table_t >::type table(tableSEXP);
+    Rcpp::traits::input_parameter< bool >::type colors(colorsSEXP);
+    rcpp_result_gen = Rcpp::wrap(tabulate_format(table, colors));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_tabulate_cell_set_text", (DL_FUNC) &_tabulate_cell_set_text, 2},
     {"_tabulate_cell_get_text", (DL_FUNC) &_tabulate_cell_get_text, 1},
     {"_tabulate_cell_format", (DL_FUNC) &_tabulate_cell_format, 1},
-    {"_tabulate_tabulate_table", (DL_FUNC) &_tabulate_tabulate_table, 0},
-    {"_tabulate_table_add_row", (DL_FUNC) &_tabulate_table_add_row, 2},
-    {"_tabulate_table_column", (DL_FUNC) &_tabulate_table_column, 2},
-    {"_tabulate_table_row", (DL_FUNC) &_tabulate_table_row, 2},
-    {"_tabulate_table_format", (DL_FUNC) &_tabulate_table_format, 1},
-    {"_tabulate_tabulate_format", (DL_FUNC) &_tabulate_tabulate_format, 2},
     {"_tabulate_column_format", (DL_FUNC) &_tabulate_column_format, 1},
     {"_tabulate_column_format_width", (DL_FUNC) &_tabulate_column_format_width, 2},
     {"_tabulate_column_format_height", (DL_FUNC) &_tabulate_column_format_height, 2},
@@ -1373,6 +1367,12 @@ static const R_CallMethodDef CallEntries[] = {
     {"_tabulate_c_format_locale", (DL_FUNC) &_tabulate_c_format_locale, 2},
     {"_tabulate_row_cell", (DL_FUNC) &_tabulate_row_cell, 2},
     {"_tabulate_row_format", (DL_FUNC) &_tabulate_row_format, 1},
+    {"_tabulate_tabulate_table", (DL_FUNC) &_tabulate_tabulate_table, 0},
+    {"_tabulate_table_add_row", (DL_FUNC) &_tabulate_table_add_row, 2},
+    {"_tabulate_table_column", (DL_FUNC) &_tabulate_table_column, 2},
+    {"_tabulate_table_row", (DL_FUNC) &_tabulate_table_row, 2},
+    {"_tabulate_table_format", (DL_FUNC) &_tabulate_table_format, 1},
+    {"_tabulate_tabulate_format", (DL_FUNC) &_tabulate_tabulate_format, 2},
     {NULL, NULL, 0}
 };
 

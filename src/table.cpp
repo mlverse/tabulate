@@ -2,6 +2,7 @@
 
 //' Create a new tabulate table
 //'
+//' @param table A table created with [tabulate_table()].
 //' @param row A character vector or a tabulate table.
 //'
 //' @examples

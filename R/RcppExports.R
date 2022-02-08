@@ -13,42 +13,6 @@ cell_format <- function(cell) {
     .Call(`_tabulate_cell_format`, cell)
 }
 
-#' Create a new tabulate table
-#'
-#' @param row A character vector or a tabulate table.
-#'
-#' @examples
-#' table <- tabulate_table() %>%
-#'   table_add_row("hello") %>%
-#'   table_add_row("world")
-#' table
-#' @export
-tabulate_table <- function() {
-    .Call(`_tabulate_tabulate_table`)
-}
-
-#' @describeIn tabulate_table Adds rows to the table.
-#' @export
-table_add_row <- function(table, row) {
-    invisible(.Call(`_tabulate_table_add_row`, table, row))
-}
-
-table_column <- function(table, index) {
-    .Call(`_tabulate_table_column`, table, index)
-}
-
-table_row <- function(table, index) {
-    .Call(`_tabulate_table_row`, table, index)
-}
-
-table_format <- function(table) {
-    .Call(`_tabulate_table_format`, table)
-}
-
-tabulate_format <- function(table, colors) {
-    .Call(`_tabulate_tabulate_format`, table, colors)
-}
-
 column_format <- function(column) {
     .Call(`_tabulate_column_format`, column)
 }
@@ -435,5 +399,42 @@ row_cell <- function(row, index) {
 
 row_format <- function(row) {
     .Call(`_tabulate_row_format`, row)
+}
+
+#' Create a new tabulate table
+#'
+#' @param table A table created with [tabulate_table()].
+#' @param row A character vector or a tabulate table.
+#'
+#' @examples
+#' table <- tabulate_table() %>%
+#'   table_add_row("hello") %>%
+#'   table_add_row("world")
+#' table
+#' @export
+tabulate_table <- function() {
+    .Call(`_tabulate_tabulate_table`)
+}
+
+#' @describeIn tabulate_table Adds rows to the table.
+#' @export
+table_add_row <- function(table, row) {
+    invisible(.Call(`_tabulate_table_add_row`, table, row))
+}
+
+table_column <- function(table, index) {
+    .Call(`_tabulate_table_column`, table, index)
+}
+
+table_row <- function(table, index) {
+    .Call(`_tabulate_table_row`, table, index)
+}
+
+table_format <- function(table) {
+    .Call(`_tabulate_table_format`, table)
+}
+
+tabulate_format <- function(table, colors) {
+    .Call(`_tabulate_tabulate_format`, table, colors)
 }
 

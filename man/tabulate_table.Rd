@@ -10,6 +10,8 @@ tabulate_table()
 table_add_row(table, row)
 }
 \arguments{
+\item{table}{A table created with \code{\link[=tabulate_table]{tabulate_table()}}.}
+
 \item{row}{A character vector or a tabulate table.}
 }
 \description{
