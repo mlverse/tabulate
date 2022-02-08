@@ -76,7 +76,7 @@ tabulate_demo <- function() {
     format_font_align("right")
 
   format %>%
-    table_add_row(c("Word-Wrapping algorithm taking shamelessly from StackOverflow",
+    table_add_row(c("Word-Wrapping algorithm taken shamelessly from StackOverflow",
                     "Long sentences automatically word-wrap based on the width of the column",
                     "Word-wrapping also plays nicely with alignment rules. For instance, this cell is center aligned.",
                     "Enforce \ncustom word-wrapping \nby embedding '\\n' \ncharacters in your cell\n content."))
