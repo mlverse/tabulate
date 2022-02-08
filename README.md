@@ -55,3 +55,6 @@ print(employees)
 ```
 
 <img src="man/figures/README-/table.svg" width="100%" />
+
+See the [example gallery](https://dfalbel.github.io/tabulate/articles/)
+for more.

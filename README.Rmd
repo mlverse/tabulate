@@ -78,3 +78,5 @@ employees[,4] %>% format_font_align("center")
 print(employees)
 ```
 
+See the [example gallery](https://dfalbel.github.io/tabulate/articles/) for more.
+
