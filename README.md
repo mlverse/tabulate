@@ -30,7 +30,7 @@ The following example shows basic functionality of tabulate. Like
 formatting and coloring the output. Note that color and font styles are
 only suppported in platforms that support ANSI strings. For a colored
 version of this table see this
-[link](file:///Users/dfalbel/Documents/tabulate/docs/articles/employees.html).
+[link](https://dfalbel.github.io/tabulate/articles/unicode.html).
 
 ``` r
 library(tabulate)
