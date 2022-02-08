@@ -8,7 +8,8 @@ articles:
   font-style: font-style.html
   mario: mario.html
   movies: movies.html
-last_built: 2022-02-08T16:56Z
+  unicode: unicode.html
+last_built: 2022-02-08T17:06Z
 urls:
   reference: https://dfalbel.github.io/tabulate/reference
   article: https://dfalbel.github.io/tabulate/articles
