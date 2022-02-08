@@ -40,6 +40,12 @@ It allows users to pretty print tables in the console, with support for differen
 font styles, colors, borders and etc. It also supports multi-bytes characters and
 nesting tables.
 
+```{asciicast demo, echo = FALSE}
+#' cols: 140
+#' padding_y: 0
+tabulate::tabulate_demo()
+```
+
 ## Installation
 
 tabulate can be installed from CRAN with:

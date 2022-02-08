@@ -13,6 +13,8 @@ print tables in the console, with support for different font styles,
 colors, borders and etc. It also supports multi-bytes characters and
 nesting tables.
 
+<img src="man/figures/README-/demo.svg" width="100%" />
+
 ## Installation
 
 tabulate can be installed from CRAN with:
