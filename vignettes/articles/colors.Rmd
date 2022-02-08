@@ -65,7 +65,8 @@ colors[3,2] %>%
 colors[3,3] %>% 
   format_font_background_color("green") %>% 
   format_font_style("bold")
-
+```
+```{r}
 print(colors)
 ```
 

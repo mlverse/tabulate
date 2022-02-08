@@ -27,7 +27,9 @@ styled_table[2,1] %>% format_font_style("underline")
 styled_table[2,2] %>% format_font_style("crossed")
 styled_table[2,3] %>% format_font_style("dark")
 styled_table[2,4] %>% format_font_style(c("bold", "italic", "underline"))
+```
 
-styled_table
+```{r}
+print(styled_table)
 ```
 

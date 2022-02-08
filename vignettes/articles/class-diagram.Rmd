@@ -108,7 +108,9 @@ class_diagram %>%
 
 class_diagram[5,] %>%
   format_hide_border_top()
-
+```
+```{r}
 print(class_diagram)
 ```
+
 

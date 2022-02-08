@@ -32,6 +32,8 @@ employees[,1] %>%
   format_font_align("right")
 
 employees[,4] %>% format_font_align("center")
-
+```
+```{r}
 print(employees)
 ```
+
