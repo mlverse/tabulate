@@ -40,5 +40,5 @@ BugReports: https://github.com/mlverse/tabulate/issues
 Suggests: 
     rmarkdown,
     testthat (>= 3.0.0),
-    emo
+    emoji
 Config/testthat/edition: 3

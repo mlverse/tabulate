@@ -7,8 +7,6 @@
 #' @export
 tabulate_demo <- function() {
 
-  rlang::check_installed("emo")
-
   readme <- tabulate_table()
   readme %>%
     format_border_color("yellow")
@@ -243,7 +241,12 @@ tabulate_demo <- function() {
   chart[8+1,17+1] %>% cell_set_text("This one's yellow and right-aligned");
   chart[8+1,17+1] %>% format_color("yellow") %>% format_font_align("right")
 
-  chart[10,18] %>% cell_set_text(paste0("This one's on ", paste(rep(emo::ji("fire"), 3), collapse = "")))
+  chart[10,18] %>% cell_set_text(paste0("This one's on ", paste(rep(fire_emoji(), 3), collapse = "")))
   print(chart)
   invisible(NULL)
+}
+
+fire_emoji <- function() {
+  rlang::check_installed("emoji")
+  unname(emoji::emoji_name[names(emoji::emoji_name) == "fire"])
 }
