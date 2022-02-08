@@ -8,9 +8,10 @@ Authors@R: c(
            role = c("aut", "cre")),
     person(given = "Pranav", 
            role = c("aut", "cph"), 
-           comment = "Author of included Tabulate code"))
+           comment = "Author of included Tabulate code"),
+    person(family = "RStudio", role = c("cph")))
 Description: Generates pretty console output for tables allowing for full customization
-  of cell colors, font type, borders and many others.
+  of cell colors, font type, borders and many others attributes.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
