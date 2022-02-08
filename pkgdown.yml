@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   class-diagram: class-diagram.html
-last_built: 2022-02-07T20:34Z
+last_built: 2022-02-08T01:36Z
 urls:
   reference: https://dfalbel.github.io/tabulate/reference
   article: https://dfalbel.github.io/tabulate/articles
