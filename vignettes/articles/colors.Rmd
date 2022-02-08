@@ -17,6 +17,7 @@ old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
 library(tabulate)
 ```
 
+:::downlit
 ```{r}
 colors <- tabulate_table()
 
@@ -55,5 +56,6 @@ colors[3,3] %>% format_font_background_color("green") %>% format_font_style("bol
 
 print(colors)
 ```
+:::
 
 
