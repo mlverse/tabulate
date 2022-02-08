@@ -7,6 +7,8 @@
 #' @export
 tabulate_demo <- function() {
 
+  rlang::check_installed("emo")
+
   readme <- tabulate_table()
   readme %>%
     format_border_color("yellow")
