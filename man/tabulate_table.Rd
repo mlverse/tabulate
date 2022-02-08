@@ -14,6 +14,9 @@ table_add_row(table, row)
 
 \item{row}{A character vector or a tabulate table.}
 }
+\value{
+A \code{tabulate_table}.
+}
 \description{
 Create a new tabulate table
 }
@@ -27,4 +30,5 @@ table <- tabulate_table() \%>\%
   table_add_row("hello") \%>\%
   table_add_row("world")
 table
+
 }

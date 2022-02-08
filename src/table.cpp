@@ -10,6 +10,10 @@
 //'   table_add_row("hello") %>%
 //'   table_add_row("world")
 //' table
+//'
+//' @returns
+//' A `tabulate_table`.
+//'
 //' @export
 // [[Rcpp::export]]
 table_t tabulate_table () {

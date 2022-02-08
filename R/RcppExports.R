@@ -411,6 +411,10 @@ row_format <- function(row) {
 #'   table_add_row("hello") %>%
 #'   table_add_row("world")
 #' table
+#'
+#' @returns
+#' A `tabulate_table`.
+#'
 #' @export
 tabulate_table <- function() {
     .Call(`_tabulate_tabulate_table`)

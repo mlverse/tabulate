@@ -5,6 +5,21 @@
 #' @param x A table, column, row or cell.
 #' @param value The value assumed by the selected parameter.
 #'
+#' @examples
+#' table <- tabulate_table()
+#' table %>%
+#'   table_add_row("hello") %>%
+#'   table_add_row("world")
+#'
+#' table %>%
+#'   format_hide_border_bottom() %>%
+#'   format_width(50)
+#'
+#' table
+#'
+#' @returns
+#' The same as the input invisibly.
+#'
 #' @name formatting
 #' @rdname formatting
 NULL

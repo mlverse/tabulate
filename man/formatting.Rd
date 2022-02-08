@@ -183,6 +183,22 @@ format_width(x, value)
 
 \item{value}{The value assumed by the selected parameter.}
 }
+\value{
+The same as the input invisibly.
+}
 \description{
 Allows changing display characteristics of tables, columns, rows and cells.
+}
+\examples{
+table <- tabulate_table()
+table \%>\%
+  table_add_row("hello") \%>\%
+  table_add_row("world")
+
+table \%>\%
+  format_hide_border_bottom() \%>\%
+  format_width(50)
+
+table
+
 }
