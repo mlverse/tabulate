@@ -103,27 +103,15 @@
     <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"102"</span>, <span class="st">"Rachel"</span>, <span class="st">"Williams"</span>, 
       <span class="st">"Marketing and Operational\nLogistics Planning"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="reference/tabulate_table.html">table_add_row</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"103"</span>, <span class="st">"Ian"</span>, <span class="st">"Jacob"</span>, <span class="va">department</span><span class="op">)</span><span class="op">)</span>
-  
+
 <span class="va">employees</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="reference/formatting.html">format_font_style</a></span><span class="op">(</span><span class="st">"bold"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
-  <span class="fu"><a href="reference/formatting.html">format_font_color</a></span><span class="op">(</span><span class="st">"white"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
+  <span class="fu"><a href="reference/formatting.html">format_font_color</a></span><span class="op">(</span><span class="st">"red"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> 
   <span class="fu"><a href="reference/formatting.html">format_font_align</a></span><span class="op">(</span><span class="st">"right"</span><span class="op">)</span>
 
-<span class="va">employees</span><span class="op">[</span>,<span class="fl">4</span><span class="op">]</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="reference/formatting.html">format_font_align</a></span><span class="op">(</span><span class="st">"center"</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">employees</span><span class="op">)</span>
-<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
-<span class="co">#&gt; | Emp. ID | First Name | Last Name | Department / Business Unit |</span>
-<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
-<span class="co">#&gt; |     101 | Donald     | Patrick   |           Finance          |</span>
-<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
-<span class="co">#&gt; |     102 | Rachel     | Williams  |  Marketing and Operational |</span>
-<span class="co">#&gt; |         |            |           |     Logistics Planning     |</span>
-<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span>
-<span class="co">#&gt; |     103 | Ian        | Jacob     | +----------+-------------+ |</span>
-<span class="co">#&gt; |         |            |           | | Research | Engineering | |</span>
-<span class="co">#&gt; |         |            |           | +----------+-------------+ |</span>
-<span class="co">#&gt; +---------+------------+-----------+----------------------------+</span></code></pre></div>
+<span class="va">employees</span><span class="op">[</span>,<span class="fl">4</span><span class="op">]</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="reference/formatting.html">format_font_align</a></span><span class="op">(</span><span class="st">"center"</span><span class="op">)</span> 
+<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">employees</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-/table.svg" width="100%"></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
