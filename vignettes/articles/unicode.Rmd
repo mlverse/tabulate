@@ -1,0 +1,45 @@
+---
+title: "Unicode"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(tabulate)
+```
+
+```{r}
+table <- tabulate_table()
+table %>% 
+  format_corner("♥") %>% 
+  format_font_style("bold") %>% 
+  format_corner_color("magenta") %>% 
+  format_border_color("magenta")
+
+table %>% 
+  table_add_row(c("English", "I love you")) %>% 
+  table_add_row(c("French", "Je t’aime")) %>% 
+  table_add_row(c("Spanish", "Te amo")) %>% 
+  table_add_row(c("German", "Ich liebe Dich")) %>% 
+  table_add_row(c("Mandarin Chinese", "我爱你")) %>% 
+  table_add_row(c("Japanese", "愛してる")) %>% 
+  table_add_row(c("Korean", "사랑해 (Saranghae)")) %>% 
+  table_add_row(c("Greek", "Σ΄αγαπώ (Se agapo)")) %>% 
+  table_add_row(c("Italian", "Ti amo")) %>% 
+  table_add_row(c("Russian", "Я тебя люблю (Ya tebya liubliu)")) %>% 
+  table_add_row(c("Hebrew", "אני אוהב אותך (Ani ohev otakh)"))
+
+# Column 2 is using mult-byte characters
+table[,2] %>% format_multi_byte_characters(TRUE);
+```
+
+```{r}
+print(table)
+```
+
+

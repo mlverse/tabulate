@@ -3,3 +3,14 @@ template:
 
 url: https://dfalbel.github.io/tabulate/
 
+articles:
+- title: Examples
+  navbar: Examples
+  contents:
+  - articles/class-diagram
+  - articles/colors
+  - articles/employees
+  - articles/font-style
+  - articles/mario
+  - articles/movies
+  - articles/unicode
