@@ -11,9 +11,8 @@ public:
   std::string name () {return "ptr_t"; };
   operator SEXP () const { return x_;};
   ptr_t (SEXP x) : x_{Rcpp::as<Rcpp::XPtr<T>>(x)} {
-    auto cl = Rcpp::as<std::string>(x_.attr("class"));
-    if (cl != name()) {
-      Rcpp::stop("Expected a pointer with class '" + name() + "' but got '" + cl + "'");
+    if (!x_.inherits(name().c_str())) {
+      Rcpp::stop("Expected a pointer with class '" + name());
     }
   };
   ptr_t (T& x) : x_{&x, false} {

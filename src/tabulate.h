@@ -7640,7 +7640,7 @@ nssv_RESTORE_WARNINGS()
                 widest_sub_string_size)
             widest_sub_string_size = get_sequence_length(
               line, cell.locale(), cell.is_multi_byte_character_support_enabled());
-          result += widest_sub_string_size;
+        result += widest_sub_string_size;
       }
 
       if (format.padding_right_.has_value())
