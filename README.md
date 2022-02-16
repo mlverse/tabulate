@@ -5,6 +5,9 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/mlverse/tabulate/workflows/R-CMD-check/badge.svg)](https://github.com/mlverse/tabulate/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/tabulate)](https://CRAN.R-project.org/package=tabulate)
+[![](https://cranlogs.r-pkg.org/badges/tabulate)](https://cran.r-project.org/package=tabulate)
 <!-- badges: end -->
 
 Tabulate is a thin wrapper around the [tabulate C++
